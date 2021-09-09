@@ -1,3 +1,4 @@
+import 'package:desktopapp/color/Color.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -9,14 +10,13 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              '',
-            ),
-          ],
+      backgroundColor: background,
+      body: Container(
+        margin: const EdgeInsets.only(left: 10.0, top: 10.0),
+        child: Image.asset(
+          'assets/icon/logo.png',
+          height: 100,
+          width: 100,
         ),
       ),
     );
