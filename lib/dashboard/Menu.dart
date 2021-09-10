@@ -14,10 +14,11 @@ class _MenuState extends State<Menu> {
       children: <Widget>[
         Container(
           margin: const EdgeInsets.only(left: 10.0, top: 10.0),
-          child: Image.asset(
-            'assets/icon/logo.png',
-            height: 100,
-            width: 100,
+          child: IconButton(
+            icon: Image.asset('assets/icon/logo.png'),
+            iconSize: 75,
+            splashColor: Colors.white,
+            onPressed: () {},
           ),
         ),
         Container(

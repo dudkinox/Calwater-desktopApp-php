@@ -11,11 +11,46 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    // return Menu();
     return Scaffold(
       backgroundColor: background,
-      body: Menu();
-
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          // Menu
+          Menu(),
+          // Dashboard
+          Column(
+            children: [
+              Card(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 100,
+                    horizontal: 300,
+                  ),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            ListView.builder(
+                              itemCount: 3,
+                              itemBuilder: (context, index) {
+                                return Card(
+                                  child: Text("test"),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
