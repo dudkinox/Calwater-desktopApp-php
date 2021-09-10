@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:desktopapp/color/Color.dart';
 import 'package:flutter/material.dart';
 
 import 'Menu.dart';
+import 'Note.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -19,35 +22,64 @@ class _DashboardState extends State<Dashboard> {
           // Menu
           Menu(),
           // Dashboard
-          Column(
-            children: [
-              Card(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 100,
-                    horizontal: 300,
-                  ),
-                  child: Container(
-                    child: Column(
+          Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(53)),
+            child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 100,
+                  horizontal: 300,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: new EdgeInsets.only(top: 16.0),
+                      child: Text(
+                        "ระบบคำนวณระบบน้ำตัวอย่าง",
+                        style: TextStyle(
+                          fontFamily: 'Itim',
+                          fontSize: 48,
+                        ),
+                      ),
+                    ),
+                    Row(
                       children: [
-                        Column(
-                          children: [
-                            ListView.builder(
-                              itemCount: 3,
-                              itemBuilder: (context, index) {
-                                return Card(
-                                  child: Text("test"),
-                                );
-                              },
-                            ),
-                          ],
+                        Container(
+                          child: Column(
+                            children: [
+                              Card(
+                                color: Colors.black,
+                                child: Text("textststst"),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              Card(
+                                color: Colors.black,
+                                child: Text("textststst"),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: [
+                              Card(
+                                color: Colors.black,
+                                child: Text("textststst"),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                ),
-              ),
-            ],
+                  ],
+                )),
           ),
         ],
       ),

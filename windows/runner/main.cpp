@@ -29,8 +29,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   project.set_dart_entrypoint_arguments(std::move(command_line_arguments));
 
   FlutterWindow window(&run_loop, project);
-  Win32Window::Point origin(100, 100);
-  Win32Window::Size size(1280, 720);
+  Win32Window::Point origin(200, 100);
+  Win32Window::Size size(1280, 768);
   if (!window.CreateAndShow(L"Water calculation system", origin, size))
   {
     return EXIT_FAILURE;
