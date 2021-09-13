@@ -19,5 +19,8 @@ func NewCrudController(e *echo.Echo, usecase usecase.CrudUseCaseI) *CrudControll
 }
 
 func (cc *CrudController) GetHealthCheck(ec echo.Context) error {
-	return ec.String(200, "API มีระบบความปลอดภัยสูง")
+	// 200 ปกติ
+	// 400 การเขียนโค้ดบัค หรือ error
+	// 500 server พัง หรือว่า เซิฟล่ม
+	return ec.String(200, "<h1>API มีระบบความปลอดภัยสูงมาก</h1>")
 }
