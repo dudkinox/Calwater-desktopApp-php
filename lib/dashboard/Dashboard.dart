@@ -1,10 +1,8 @@
-import 'dart:math';
-
 import 'package:desktopapp/color/Color.dart';
 import 'package:flutter/material.dart';
-
+import 'MeneSave.dart';
 import 'Menu.dart';
-import 'Note.dart';
+import 'Topic.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -23,62 +21,19 @@ class _DashboardState extends State<Dashboard> {
           Menu(),
           // Dashboard
           Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(53)),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 1155,
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                        "ระบบคำนวณระบบน้ำตัวอย่าง",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: 'Itim',
-                          fontSize: 48,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        child: Column(
-                          children: [
-                            Card(
-                              color: Colors.black,
-                              child: Text("textststst"),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        child: Column(
-                          children: [
-                            Card(
-                              color: Colors.black,
-                              child: Text("textststst"),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        child: Column(
-                          children: [
-                            Card(
-                              color: Colors.black,
-                              child: Text("textststst"),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              )),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(53)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                // หัวข้อ ไม่ใช่หัวเข่า
+                Topic(),
+                // เมนู ปลาซามอล
+                MenuSave(),
+              ],
+            ),
+          ),
         ],
       ),
     );
