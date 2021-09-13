@@ -12,5 +12,6 @@ func Router(e *echo.Echo, crudUseCase usecase.CrudUseCaseI) {
 
 	// localhost:1412
 	e.GET("", call.GetHealthCheck)
-	e.GET("/test", call.GetHealthCheck)
+	api := e.Group("api")
+	api.GET("/get_name", call.GetName)
 }

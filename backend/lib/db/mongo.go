@@ -19,10 +19,7 @@ type MongoConfig struct {
 }
 
 func Connect(c MongoConfig) (*mongo.Database, error) {
-	connPattern := "mongodb://%v:%v@%v:%v"
-	if c.Username == "" {
-		connPattern = "mongodb://%s%s%v:%v"
-	}
+	connPattern := "mongodb+srv://%v:%v@%v:%v?retryWrites=true&w=majority"
 
 	clientUrl := fmt.Sprintf(connPattern,
 		c.Username,
