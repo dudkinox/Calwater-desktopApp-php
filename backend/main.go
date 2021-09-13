@@ -50,6 +50,7 @@ func main() {
 		log.Println(err)
 		return
 	}
+	log.Println(mongo)
 	crudRepo := repository.NewCrudRepository(mongo)
 	crudUseCase := usecase.NewCrudUseCase(&envConfig, crudRepo)
 	router.Router(e, crudUseCase)
