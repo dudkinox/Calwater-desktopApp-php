@@ -22,5 +22,5 @@ func (cc *CrudController) GetHealthCheck(ec echo.Context) error {
 	// 200 ปกติ
 	// 400 การเขียนโค้ดบัค หรือ error
 	// 500 server พัง หรือว่า เซิฟล่ม
-	return ec.String(200, "<h1>API มีระบบความปลอดภัยสูงมาก</h1>")
+	return ec.String(200, "สวัสดี อันนี้ทดสอบเฉยๆ")
 }
