@@ -6,7 +6,7 @@ class MenuSave extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
+     Row(
           children: [
             Card(
               shape: RoundedRectangleBorder(
@@ -62,6 +62,9 @@ class MenuSave extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              width: 8,
+            ),
             Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(53)),
@@ -69,7 +72,9 @@ class MenuSave extends StatelessWidget {
               child: Container(
                 width: 183,
                 height: 196,
-                child: Text(
+                child: Column(
+                  children : [
+                  Text(
                   "S3",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -77,16 +82,57 @@ class MenuSave extends StatelessWidget {
                     fontSize: 36,
                   ),
                 ),
+                 SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "2,200 ข้อมูล",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "อัพเดทล่าสุด",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                  Text(
+                      "08/10/2564",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 18,
+                      ),
+                    ),
+                  ]
               ),
             ),
-            Card(
+        ),
+        SizedBox(
+              width: 8,
+            ),
+        Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(53)),
-              color: e1,
+              color: s3,
               child: Container(
                 width: 183,
                 height: 196,
-                child: Text(
+                child: Column(
+                  children : [
+Text(
+                  
                   "E1",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -94,9 +140,44 @@ class MenuSave extends StatelessWidget {
                     fontSize: 36,
                   ),
                 ),
+                SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "2,200 ข้อมูล",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      "อัพเดทล่าสุด",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                  Text(
+                      "08/10/2564",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 18,
+                      ),
+                    ),
+                  ]
               ),
             ),
-          ],
+           
+        
         ),
         SizedBox(
           height: 19,
@@ -120,6 +201,6 @@ class MenuSave extends StatelessWidget {
           ],
         ),
       ],
-    );
+     ),
   }
 }
