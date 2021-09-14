@@ -6,6 +6,6 @@ import (
 )
 
 type CrudRepositoryI interface {
-	GetNameData(ctx context.Context) (crudResp model.GetNameResponse, err error)
 	InfoData(ctx context.Context) (crudResp model.GetInfoResponse, err error)
+	InsertInfoData(ctx context.Context, model model.ModelInfo) (ID string, err error)
 }
