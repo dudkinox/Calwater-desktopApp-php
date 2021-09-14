@@ -1,8 +1,10 @@
 package controller
 
 import (
+	"backend/model"
 	"backend/usecase"
 	"context"
+	"encoding/json"
 
 	"github.com/labstack/echo/v4"
 )
@@ -26,16 +28,6 @@ func (cc *CrudController) GetHealthCheck(ec echo.Context) error {
 	return ec.String(200, "สวัสดี อันนี้ทดสอบเฉยๆ")
 }
 
-func (cc *CrudController) GetName(ec echo.Context) error {
-
-	result, err := cc.usecase.GetNameUC(context.Background())
-	if err != nil {
-		return ec.JSON(400, err)
-	}
-
-	return ec.JSON(200, result)
-}
-
 func (cc *CrudController) Info(ec echo.Context) error {
 
 	result, err := cc.usecase.InfoUC(context.Background())
@@ -44,4 +36,34 @@ func (cc *CrudController) Info(ec echo.Context) error {
 	}
 
 	return ec.JSON(200, result)
+}
+
+func (cc *CrudController) InsertInfo(ec echo.Context) error {
+
+	var req model.ModelInfo
+	err := json.NewDecoder(ec.Request().Body).Decode(&req)
+	if err != nil {
+		return err
+	}
+
+	ID, error := cc.usecase.InsertInfoUC(context.Background(), req)
+
+	if error != nil {
+		return error
+	}
+
+	return ec.JSON(200, ID)
+}
+
+func (cc *CrudController) DeleteInfo(ec echo.Context) error {
+
+	var id = ec.Param("id")
+
+	Status, error := cc.usecase.DeleteInfoUC(context.Background(), id)
+
+	if error != nil {
+		return error
+	}
+
+	return ec.JSON(200, Status)
 }
