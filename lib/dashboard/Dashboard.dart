@@ -29,6 +29,9 @@ class _DashboardState extends State<Dashboard> {
               children: [
                 // หัวข้อ ไม่ใช่หัวเข่า
                 Topic(),
+                SizedBox(
+                  height: 6,
+                ),
                 // เมนู ปลาซามอล
                 MenuSave(),
               ],
