@@ -4,9 +4,11 @@ import (
 	"backend/model"
 	"context"
 	"fmt"
+	"log"
 	"strings"
 
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -57,4 +59,15 @@ func (cr CrudRepository) InsertInfoData(ctx context.Context, req model.ModelInfo
 	formatNewID := strings.Split(formatObject[1], `"`)
 
 	return formatNewID[1], err
+}
+
+func (cr CrudRepository) DeleteInfoData(ctx context.Context, ID string) (Status string, err error) {
+	objId, _ := primitive.ObjectIDFromHex(ID)
+	result, err := cr.mongoDB.Collection("wastewaterdata").DeleteOne(ctx, bson.M{"_id": objId})
+	if err != nil {
+		return "ลบไม่ได้", err
+	}
+	log.Println(result)
+
+	return "ลบไอดีนี้แล้ว => " + ID, err
 }

@@ -11,8 +11,8 @@ func Router(e *echo.Echo, crudUseCase usecase.CrudUseCaseI) {
 	call := controller.NewCrudController(e, crudUseCase)
 
 	e.GET("", call.GetHealthCheck)
-	api := e.Group("api")
-	// GET POST PUT DELETE
-	api.GET("/info", call.Info)
+	api := e.Group("api/info")
+	api.GET("", call.Info)
 	api.POST("", call.InsertInfo)
+	api.DELETE("/:id", call.DeleteInfo)
 }

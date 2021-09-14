@@ -54,3 +54,16 @@ func (cc *CrudController) InsertInfo(ec echo.Context) error {
 
 	return ec.JSON(200, ID)
 }
+
+func (cc *CrudController) DeleteInfo(ec echo.Context) error {
+
+	var id = ec.Param("id")
+
+	Status, error := cc.usecase.DeleteInfoUC(context.Background(), id)
+
+	if error != nil {
+		return error
+	}
+
+	return ec.JSON(200, Status)
+}

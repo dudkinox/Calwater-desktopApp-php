@@ -46,3 +46,16 @@ func (cuc *CrudUseCase) InsertInfoUC(ctx context.Context, req model.ModelInfo) (
 
 	return reselt, nil
 }
+
+func (cuc *CrudUseCase) DeleteInfoUC(ctx context.Context, ID string) (Status string, err error) {
+	if ctx == nil {
+		ctx = context.Background()
+	}
+
+	reselt, err := cuc.crudRepo.DeleteInfoData(ctx, ID)
+	if err != nil {
+		return "ผิดพลาด", err
+	}
+
+	return reselt, nil
+}
