@@ -35,3 +35,13 @@ func (cc *CrudController) GetName(ec echo.Context) error {
 
 	return ec.JSON(200, result)
 }
+
+func (cc *CrudController) Info(ec echo.Context) error {
+
+	result, err := cc.usecase.InfoUC(context.Background())
+	if err != nil {
+		return ec.JSON(400, err)
+	}
+
+	return ec.JSON(200, result)
+}
