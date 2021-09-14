@@ -33,3 +33,15 @@ func (cuc *CrudUseCase) GetNameUC(ctx context.Context) (resp model.GetNameRespon
 
 	return list, err
 }
+
+func (cuc *CrudUseCase) InfoUC(ctx context.Context) (resp model.GetInfoResponse, err error) {
+	if ctx == nil {
+		ctx = context.Background()
+	}
+	list, err := cuc.crudRepo.InfoData(ctx)
+	if err != nil {
+		return resp, err
+	}
+
+	return list, err
+}
