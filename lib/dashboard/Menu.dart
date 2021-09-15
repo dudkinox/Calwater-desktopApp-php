@@ -33,7 +33,7 @@ class _MenuState extends State<Menu> {
         Container(
           margin: const EdgeInsets.only(left: 10.0, top: 10.0),
           child: IconButton(
-            icon: Image.asset('assets/icon/note.png'),
+            icon: Image.asset('assets/icon/adddata.png'),
             iconSize: 75,
             splashColor: Colors.white,
             onPressed: () {},

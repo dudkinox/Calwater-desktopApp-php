@@ -13,7 +13,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: background,
+      backgroundColor: bgcolor,
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
