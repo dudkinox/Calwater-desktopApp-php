@@ -5,6 +5,7 @@ import (
 	"backend/usecase"
 	"context"
 	"encoding/json"
+	"fmt"
 
 	"github.com/labstack/echo/v4"
 )
@@ -22,9 +23,21 @@ func NewCrudController(e *echo.Echo, usecase usecase.CrudUseCaseI) *CrudControll
 }
 
 func (cc *CrudController) GetHealthCheck(ec echo.Context) error {
-	// 200 ปกติ
-	// 400 การเขียนโค้ดบัค หรือ error
-	// 500 server พัง หรือว่า เซิฟล่ม
+	Total_Cr := 110.3
+	Cu := 54.43
+	Mn := 2.239
+	Ni := 44.94
+	Pb := 0.001
+	Zn := 201.2
+	Total_Metal := (Total_Cr / (1000 * 51.996)) + (Cu / (1000 * 63.55)) + (Mn / (1000 * 54.93)) + (Ni / (1000 * 58.93)) + (Pb / (1000 * 207.2)) + (Zn / (1000 * 65.4))
+	fmt.Println("Total_Metal =>", Total_Metal)
+	// var Ca_OH_2 = (((Total_Cr / (1000 * 51.996)) * (3 / 2) * 74.093) + (((Cu / (1000 * 63.55)) + (Mn / (1000 * 54.93)) + (Ni / (1000 * 58.93)) + (Pb / (1000 * 207.2)) + (Zn / (1000 * 65.4))) * 74.093)) * (100 / 93.15)
+	Ca_OH_2 := (((Total_Cr / (1000 * 51.996)) * (3 / 2) * 74.093) + (((Cu / (1000 * 63.55)) + (Mn / (1000 * 54.93)) + (Ni / (1000 * 58.93)) + (Pb / (1000 * 207.2)) + (Zn / (1000 * 65.4))) * 74.093)) * (100 / 93.15)
+	fmt.Println("Ca_OH_2 =>", Ca_OH_2)
+	var Model1L = Ca_OH_2 * 14.659
+	fmt.Println("Model1L =>", Model1L)
+	var Lab1L = Ca_OH_2 * 14.67
+	fmt.Println("Lab1L =>", Lab1L)
 	return ec.String(200, "สวัสดี อันนี้ทดสอบเฉยๆ")
 }
 

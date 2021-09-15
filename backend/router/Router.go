@@ -15,4 +15,7 @@ func Router(e *echo.Echo, crudUseCase usecase.CrudUseCaseI) {
 	api.GET("", call.Info)
 	api.POST("", call.InsertInfo)
 	api.DELETE("/:id", call.DeleteInfo)
+
+	apiS2 := e.Group("api/s2")
+	apiS2.GET("", call.GetHealthCheck)
 }
