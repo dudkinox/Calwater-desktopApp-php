@@ -46,7 +46,7 @@ public class main extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("E:\\Flutter\\flutter_desktopapp\\assets\\icon\\logo.png"));
+		lblNewLabel.setIcon(new ImageIcon("E:\\Flutter\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\logo.png"));
 		lblNewLabel.setBounds(0, 0, 183, 156);
 		contentPane.add(lblNewLabel);
 	}
