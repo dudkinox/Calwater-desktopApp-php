@@ -16,8 +16,8 @@ class MenuSave extends StatelessWidget {
                   borderRadius: BorderRadius.circular(53)),
               color: s2,
               child: Container(
-                width: 183,
-                height: 196,
+                width: 196,
+                height: 277,
                 child: Column(
                   children: [
                     SizedBox(
@@ -32,7 +32,7 @@ class MenuSave extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 20,
                     ),
                     Text(
                       "2,200 ข้อมูล",
@@ -43,7 +43,7 @@ class MenuSave extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 8,
+                      height: 10,
                     ),
                     Text(
                       "อัพเดทล่าสุด",
@@ -54,7 +54,7 @@ class MenuSave extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 8,
+                      height: 10,
                     ),
                     Text(
                       "08/10/2564",
@@ -76,8 +76,8 @@ class MenuSave extends StatelessWidget {
                   borderRadius: BorderRadius.circular(53)),
               color: s3,
               child: Container(
-                width: 183,
-                height: 196,
+                width: 196,
+                height: 277,
                 child: Column(children: [
                   SizedBox(
                     height: 10,
@@ -91,7 +91,7 @@ class MenuSave extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   Text(
                     "2,200 ข้อมูล",
@@ -102,7 +102,7 @@ class MenuSave extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 10,
                   ),
                   Text(
                     "อัพเดทล่าสุด",
@@ -113,7 +113,7 @@ class MenuSave extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 10,
                   ),
                   Text(
                     "08/10/2564",
@@ -134,8 +134,8 @@ class MenuSave extends StatelessWidget {
                   borderRadius: BorderRadius.circular(53)),
               color: e1,
               child: Container(
-                width: 183,
-                height: 196,
+                width: 196,
+                height: 277,
                 child: Column(children: [
                   SizedBox(
                     height: 10,
@@ -149,7 +149,7 @@ class MenuSave extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   Text(
                     "2,200 ข้อมูล",
@@ -160,7 +160,7 @@ class MenuSave extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 10,
                   ),
                   Text(
                     "อัพเดทล่าสุด",
@@ -171,7 +171,7 @@ class MenuSave extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 10,
                   ),
                   Text(
                     "08/10/2564",

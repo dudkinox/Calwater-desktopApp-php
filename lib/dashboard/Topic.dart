@@ -4,7 +4,7 @@ class Topic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 1155,
+      width: 1130,
       child: Align(
         alignment: Alignment.topCenter,
         child: Text(
