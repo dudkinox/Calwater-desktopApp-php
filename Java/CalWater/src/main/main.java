@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import ConnectDB.Connections;
+
 import java.awt.Color;
 import javax.swing.JSplitPane;
 import javax.swing.JToolBar;
@@ -23,23 +26,26 @@ public class main extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * @throws Exception 
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					main frame = new main();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	public static void main(String[] args) throws Exception {
+		Connections call = new Connections();
+		call.Test();
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					main frame = new main();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
 	}
 
 	/**
-	 * Create the frame.
-	 */
+	 * Create the frame. 
+ 	 */
 	public main() {
 		setTitle("\u0E23\u0E30\u0E1A\u0E1A\u0E04\u0E33\u0E19\u0E27\u0E13\u0E23\u0E30\u0E1A\u0E1A\u0E19\u0E49\u0E33\u0E15\u0E31\u0E27\u0E2D\u0E22\u0E48\u0E32\u0E07");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("F:\\Desktop app\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\logo.png"));
@@ -85,7 +91,7 @@ public class main extends JFrame {
 		panel.setBounds(151, 10, 1100, 711);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_2 = new JLabel("\u0E23\u0E30\u0E1A\u0E1A\u0E04\u0E33\u0E19\u0E27\u0E13\u0E23\u0E30\u0E1A\u0E1A\u0E19\u0E49\u0E33\u0E15\u0E31\u0E27\u0E2D\u0E22\u0E48\u0E32\u0E07");
+		JLabel lblNewLabel_2 = new JLabel("Test");
 		lblNewLabel_2.setFont(new Font("Itim", Font.PLAIN, 48));
 		panel.add(lblNewLabel_2);
 	}
