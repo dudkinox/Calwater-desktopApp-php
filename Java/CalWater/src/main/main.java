@@ -1,23 +1,17 @@
 package main;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import ConnectDB.Connections;
+import Calculate.Calculate;
 
 import java.awt.Color;
-import javax.swing.JSplitPane;
-import javax.swing.JToolBar;
-import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Toolkit;
-import javax.swing.JTextField;
 import java.awt.Font;
 
 public class main extends JFrame {
@@ -29,8 +23,11 @@ public class main extends JFrame {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		Connections call = new Connections();
-		call.Test();
+		Calculate call = new Calculate();
+		double sumTotal_metal = call.SumTotalMetal();
+		double sumCa_OH_2 = call.Sum_Ca_OH_2();
+		System.err.println("Total_metal => " + sumTotal_metal);
+		System.err.println("Ca(OH)2 (g) => " + sumCa_OH_2);
 //		EventQueue.invokeLater(new Runnable() {
 //			public void run() {
 //				try {

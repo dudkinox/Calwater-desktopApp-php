@@ -9,17 +9,19 @@ import java.sql.ResultSet;
 //import java.sql.Connection;
 
 public class Connections {
-	public void Test() throws Exception{
+	final String Database = "jdbc:mysql://localhost:3306/calwater";
+	final String Username = "root";
+	final String Password = "";
+	public ResultSet GetResult(String query) throws Exception{
 		try {
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/calwater", "root", "");
-			PreparedStatement state = conn.prepareStatement("SELECT * FROM info");
+			Connection conn = DriverManager.getConnection(Database, Username, Password);
+			PreparedStatement state = conn.prepareStatement(query);
 			ResultSet result = state.executeQuery();
-			while(result.next()) {				
-				System.out.println("Volume => " + result.getString(2));
-			}
+			return result;
 		}catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
+			return null;
 		}
 	}
 }
