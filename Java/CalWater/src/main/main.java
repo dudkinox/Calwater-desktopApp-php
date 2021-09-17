@@ -16,6 +16,9 @@ import java.awt.Font;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+import javax.swing.JScrollBar;
 
 public class main extends JFrame {
 
@@ -49,7 +52,7 @@ public class main extends JFrame {
  	 */
 	public main() {
 		setTitle("\u0E23\u0E30\u0E1A\u0E1A\u0E04\u0E33\u0E19\u0E27\u0E13\u0E23\u0E30\u0E1A\u0E1A\u0E19\u0E49\u0E33\u0E15\u0E31\u0E27\u0E2D\u0E22\u0E48\u0E32\u0E07");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("F:\\Desktop app\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\logo.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\flutter desktop app\\desktop\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\logo.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(150,20, 1280,768);
 		contentPane = new JPanel();
@@ -89,36 +92,120 @@ public class main extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(166, 10, 1100, 711);
+		panel.setBounds(153, 10, 1100, 711);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("Test");
-		lblNewLabel_2.setBounds(505, 5, 90, 58);
+		JLabel lblNewLabel_2 = new JLabel("\u0E23\u0E30\u0E1A\u0E1A\u0E1A\u0E04\u0E33\u0E19\u0E27\u0E13\u0E23\u0E30\u0E1A\u0E1A\u0E19\u0E49\u0E33\u0E15\u0E31\u0E27\u0E2D\u0E22\u0E48\u0E32\u0E07");
+		lblNewLabel_2.setBounds(280, 10, 618, 58);
 		lblNewLabel_2.setFont(new Font("Itim", Font.PLAIN, 48));
 		panel.add(lblNewLabel_2);
-		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(52, 91, 136, 173);
-		panel.add(tabbedPane);
 		
 		
 		
 		JButton btnNewButton = new JButton("GO");
+		btnNewButton.setBounds(309, 335, 90, 33);
 		btnNewButton.setFont(new Font("Itim", Font.PLAIN, 34));
-		btnNewButton.setBounds(305, 323, 90, 33);
 		panel.add(btnNewButton);
 		
 		textField = new JTextField();
+		textField.setBounds(25, 334, 274, 33);
 		textField.setFont(new Font("Itim", Font.PLAIN, 34));
 		textField.setText("\u0E04\u0E49\u0E19\u0E2B\u0E32");
-		textField.setBounds(74, 322, 221, 33);
 		panel.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("ข้อมูลรายละเอียดน้ำ");
+		JLabel lblNewLabel_3 = new JLabel("\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E23\u0E32\u0E22\u0E25\u0E30\u0E40\u0E2D\u0E35\u0E22\u0E14\u0E19\u0E49\u0E33");
+		lblNewLabel_3.setBounds(163, 286, 195, 51);
 		lblNewLabel_3.setFont(new Font("Itim", Font.PLAIN, 24));
-		lblNewLabel_3.setBounds(147, 276, 195, 51);
 		panel.add(lblNewLabel_3);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(123,144,169));
+		panel_1.setBounds(25, 81, 143, 196);
+		
+		panel.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_4 = new JLabel("S2");
+		lblNewLabel_4.setBounds(48, 0, 39, 44);
+		lblNewLabel_4.setFont(new Font("Itim", Font.PLAIN, 36));
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_1.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("2,200 \u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25");
+		lblNewLabel_5.setBounds(-5, 54, 123, 23);
+		lblNewLabel_5.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.TRAILING);
+		lblNewLabel_5.setFont(new Font("Itim", Font.PLAIN, 18));
+		panel_1.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("\u0E2D\u0E31\u0E1E\u0E40\u0E14\u0E15\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14");
+		lblNewLabel_6.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_6.setBounds(28, 74, 141, 30);
+		panel_1.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_6_1 = new JLabel("08/10/2564");
+		lblNewLabel_6_1.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_6_1.setBounds(26, 100, 97, 30);
+		panel_1.add(lblNewLabel_6_1);
+		
+		JPanel panel_1_1 = new JPanel();
+		panel_1_1.setLayout(null);
+		panel_1_1.setBackground(new Color(123, 144, 169));
+		panel_1_1.setBounds(188, 81, 143, 196);
+		panel.add(panel_1_1);
+		
+		JLabel lblNewLabel_4_1 = new JLabel("S3");
+		lblNewLabel_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4_1.setFont(new Font("Itim", Font.PLAIN, 36));
+		lblNewLabel_4_1.setBounds(48, 0, 45, 44);
+		panel_1_1.add(lblNewLabel_4_1);
+		
+		JLabel lblNewLabel_5_1 = new JLabel("2,200 \u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25");
+		lblNewLabel_5_1.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblNewLabel_5_1.setHorizontalAlignment(SwingConstants.TRAILING);
+		lblNewLabel_5_1.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_5_1.setBounds(-5, 54, 123, 23);
+		panel_1_1.add(lblNewLabel_5_1);
+		
+		JLabel lblNewLabel_6_2 = new JLabel("\u0E2D\u0E31\u0E1E\u0E40\u0E14\u0E15\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14");
+		lblNewLabel_6_2.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_6_2.setBounds(28, 74, 141, 30);
+		panel_1_1.add(lblNewLabel_6_2);
+		
+		JLabel lblNewLabel_6_1_1 = new JLabel("08/10/2564");
+		lblNewLabel_6_1_1.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_6_1_1.setBounds(28, 100, 97, 30);
+		panel_1_1.add(lblNewLabel_6_1_1);
+		
+		JPanel panel_1_2 = new JPanel();
+		panel_1_2.setLayout(null);
+		panel_1_2.setBackground(new Color(123, 144, 169));
+		panel_1_2.setBounds(352, 81, 143, 196);
+		panel.add(panel_1_2);
+		
+		JLabel lblNewLabel_4_2 = new JLabel("E1");
+		lblNewLabel_4_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4_2.setFont(new Font("Itim", Font.PLAIN, 36));
+		lblNewLabel_4_2.setBounds(48, 0, 39, 44);
+		panel_1_2.add(lblNewLabel_4_2);
+		
+		JLabel lblNewLabel_5_2 = new JLabel("2,200 \u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25");
+		lblNewLabel_5_2.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblNewLabel_5_2.setHorizontalAlignment(SwingConstants.TRAILING);
+		lblNewLabel_5_2.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_5_2.setBounds(-5, 54, 123, 23);
+		panel_1_2.add(lblNewLabel_5_2);
+		
+		JLabel lblNewLabel_6_3 = new JLabel("\u0E2D\u0E31\u0E1E\u0E40\u0E14\u0E15\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14");
+		lblNewLabel_6_3.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_6_3.setBounds(28, 74, 141, 30);
+		panel_1_2.add(lblNewLabel_6_3);
+		
+		JLabel lblNewLabel_6_1_2 = new JLabel("08/10/2564");
+		lblNewLabel_6_1_2.setFont(new Font("Itim", Font.PLAIN, 18));
+		lblNewLabel_6_1_2.setBounds(26, 100, 97, 30);
+		panel_1_2.add(lblNewLabel_6_1_2);
 	}
 }
