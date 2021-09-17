@@ -4,7 +4,7 @@ package main;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
+import java.awt.EventQueue;
 import Calculate.Calculate;
 
 import java.awt.Color;
@@ -22,22 +22,22 @@ public class main extends JFrame {
 	 * Launch the application.
 	 * @throws Exception 
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception{
 		Calculate call = new Calculate();
 		double sumTotal_metal = call.SumTotalMetal();
 		double sumCa_OH_2 = call.Sum_Ca_OH_2();
 		System.err.println("Total_metal => " + sumTotal_metal);
 		System.err.println("Ca(OH)2 (g) => " + sumCa_OH_2);
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					main frame = new main();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					main frame = new main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	/**
