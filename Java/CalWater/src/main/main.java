@@ -33,8 +33,14 @@ public class main extends JFrame {
 		Calculate call = new Calculate();
 		double sumTotal_metal = call.SumTotalMetal();
 		double sumCa_OH_2 = call.Sum_Ca_OH_2();
-		System.err.println("Total_metal => " + sumTotal_metal);
-		System.err.println("Ca(OH)2 (g) => " + sumCa_OH_2);
+		double sum_Fe_SO_4 = call.Sum_Fe_SO_4();
+		double sum_NaOCl = call.Sum_NaOCl();
+		double sum_TDS = call.Sum_TDS();
+		System.out.println("Total_metal => " + sumTotal_metal);
+		System.out.println("Ca(OH)2 (g) => " + sumCa_OH_2);
+		System.out.println("FeSO4 (g).7H2O => " + sum_Fe_SO_4);
+		System.out.println("NaOCl model => " + sum_NaOCl);
+		System.out.println("TDS => " + sum_TDS);
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
