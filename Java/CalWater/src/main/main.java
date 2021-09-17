@@ -13,10 +13,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Toolkit;
 import java.awt.Font;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
 
 public class main extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -28,16 +32,16 @@ public class main extends JFrame {
 		double sumCa_OH_2 = call.Sum_Ca_OH_2();
 		System.err.println("Total_metal => " + sumTotal_metal);
 		System.err.println("Ca(OH)2 (g) => " + sumCa_OH_2);
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					main frame = new main();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+			try {
+			main frame = new main();
+					frame.setVisible(true);
+		} catch (Exception e) {
+					e.printStackTrace();
+			}
+		}
+	});
 	}
 
 	/**
@@ -55,13 +59,13 @@ public class main extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel logo = new JLabel("");
-		logo.setIcon(new ImageIcon("F:\\Desktop app\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\logo4.png"));
+		logo.setIcon(new ImageIcon("E:\\flutter desktop app\\desktop\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\logo4.png"));
 		logo.setBounds(20, 10, 153, 118);
 		contentPane.add(logo);
 		
 		JLabel logo_1 = new JLabel("");
 		logo_1.setFont(new Font("Itim", Font.PLAIN, 18));
-		logo_1.setIcon(new ImageIcon("F:\\Desktop app\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\adddata1.png"));
+		logo_1.setIcon(new ImageIcon("E:\\flutter desktop app\\desktop\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\adddata1.png"));
 		logo_1.setBounds(30, 130, 88, 118);
 		contentPane.add(logo_1);
 		
@@ -70,7 +74,7 @@ public class main extends JFrame {
 		contentPane.add(separator);
 		
 		JLabel logo_1_1 = new JLabel("");
-		logo_1_1.setIcon(new ImageIcon("F:\\Desktop app\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\chart1.png"));
+		logo_1_1.setIcon(new ImageIcon("E:\\flutter desktop app\\desktop\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\chart1.png"));
 		logo_1_1.setBounds(30, 272, 88, 103);
 		contentPane.add(logo_1_1);
 		
@@ -85,11 +89,36 @@ public class main extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(151, 10, 1100, 711);
+		panel.setBounds(166, 10, 1100, 711);
 		contentPane.add(panel);
+		panel.setLayout(null);
 		
 		JLabel lblNewLabel_2 = new JLabel("Test");
+		lblNewLabel_2.setBounds(505, 5, 90, 58);
 		lblNewLabel_2.setFont(new Font("Itim", Font.PLAIN, 48));
 		panel.add(lblNewLabel_2);
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBounds(52, 91, 136, 173);
+		panel.add(tabbedPane);
+		
+		
+		
+		JButton btnNewButton = new JButton("GO");
+		btnNewButton.setFont(new Font("Itim", Font.PLAIN, 34));
+		btnNewButton.setBounds(305, 323, 90, 33);
+		panel.add(btnNewButton);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Itim", Font.PLAIN, 34));
+		textField.setText("\u0E04\u0E49\u0E19\u0E2B\u0E32");
+		textField.setBounds(74, 322, 221, 33);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_3 = new JLabel("ข้อมูลรายละเอียดน้ำ");
+		lblNewLabel_3.setFont(new Font("Itim", Font.PLAIN, 24));
+		lblNewLabel_3.setBounds(147, 276, 195, 51);
+		panel.add(lblNewLabel_3);
 	}
 }
