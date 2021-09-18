@@ -217,8 +217,18 @@ public class main extends JFrame {
 		lblNewLabel_6_1_2.setBounds(26, 100, 97, 30);
 		panel_1_2.add(lblNewLabel_6_1_2);
 		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("E:\\flutter desktop app\\desktop\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\arrow2.png"));
+		lblNewLabel_7.setBounds(419, 324, 52, 54);
+		panel.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon("E:\\flutter desktop app\\desktop\\flutter_desktopapp\\Java\\CalWater\\assets\\icon\\arrorw3.png"));
+		lblNewLabel_8.setBounds(481, 324, 58, 54);
+		panel.add(lblNewLabel_8);
+		
 		table = new JTable();
-		table.setBounds(25, 394, 1065, 307);
+		table.setBounds(25, 378, 1065, 323);
 		panel.add(table);
 		
 	}
