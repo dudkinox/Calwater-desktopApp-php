@@ -4,9 +4,12 @@ package main;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.EventQueue;
-import Calculate.Calculate;
 
+import CalculateE1.CalculateE1;
+import CalculateS2.CalculateS2;
+import CalculateS3.CalculateS3;
+
+import java.awt.EventQueue;
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -30,7 +33,7 @@ public class main extends JFrame {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception{
-		Calculate call = new Calculate();
+		CalculateE1 call = new CalculateE1();
 		double sumTotal_metal = call.SumTotalMetal();
 		double sumCa_OH_2 = call.Sum_Ca_OH_2();
 		double sum_Fe_SO_4 = call.Sum_Fe_SO_4();
@@ -38,19 +41,19 @@ public class main extends JFrame {
 		double sum_TDS = call.Sum_TDS();
 		System.out.println("Total_metal => " + sumTotal_metal);
 		System.out.println("Ca(OH)2 (g) => " + sumCa_OH_2);
-		System.out.println("FeSO4 (g).7H2O => " + sum_Fe_SO_4);
+		System.out.println("FeSO4 (g) => " + sum_Fe_SO_4);
 		System.out.println("NaOCl model => " + sum_NaOCl);
 		System.out.println("TDS => " + sum_TDS);
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					main frame = new main();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					main frame = new main();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
 	}
 
 	/**
