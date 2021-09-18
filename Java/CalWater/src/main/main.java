@@ -47,16 +47,16 @@ public class main extends JFrame {
 		System.out.println("FeSO4 (g) => " + sum_Fe_SO_4);
 		System.out.println("NaOCl model => " + sum_NaOCl);
 		System.out.println("TDS => " + sum_TDS);
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					main frame = new main();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					main frame = new main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	/**
