@@ -22,11 +22,14 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollBar;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
 
 public class main extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -216,5 +219,10 @@ public class main extends JFrame {
 		lblNewLabel_6_1_2.setFont(new Font("Itim", Font.PLAIN, 18));
 		lblNewLabel_6_1_2.setBounds(26, 100, 97, 30);
 		panel_1_2.add(lblNewLabel_6_1_2);
+		
+		table = new JTable();
+		table.setBounds(25, 394, 1065, 307);
+		panel.add(table);
+		
 	}
 }
