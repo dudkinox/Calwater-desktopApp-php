@@ -1,0 +1,26 @@
+Title Subscribe to a Pegasus Mail Mailing List
+
+#  This template allows the user to subscribe to any of the Pegasus
+#  Mail Mailing lists hosted a bama.ua.edu; it prompts the user for
+#  a little information, then sends the subscription request off
+#  formatted for the LISTSERV program.
+
+text 0 Use this template to subscribe to any of the Pegasus Mail
+text 0 mailing lists hosted by the University of Alabama at Tuscaloosa.
+text 0
+
+string pmlist ";General Pegasus Mail List;Pegasus Mail for Windows List;Mercury MTS List;Pegasus Mail for Mac List;Pegasus Mail for DOS List;Pegasus Mail Announcements List" "Which mailing list?" 0 list
+string adlist ";PMAIL;PM-WIN;MERCURY;PM-MAC;PM-DOS;PM-NEWS" "" 0 list
+string myname "~p" "Your name (as \"First/Last\"):"
+string listname ""
+
+lookup "~vpmlist~" pmlist adlist listname
+
+set to = listserv@bama.ua.edu
+set subject = "Subscription to ~vpmlist~"
+set confirm-reading = "N"
+set copyself = "N"
+set signature = none
+
+insert "subscribe ~vlistname~ ~vmyname~~z"
+

@@ -282,14 +282,14 @@ public class main extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		panel_2.add(lblNewLabel_1);
 		
-		ObservableList<PieChart.Data> pieData = FXCollections.observableArrayList(
-				 new PieChart.Data("IT", 40),
-				 new PieChart.Data("ENG", 20),
-				 new PieChart.Data("DOC", 30),
-				 new PieChart.Data("FIN", 5),
-				 new PieChart.Data("CHE", 5)
-				);
-		PieChart pChart = new PieChart(pieData);
+//		ObservableList<PieChart.Data> pieData = FXCollections.observableArrayList(
+//				 new PieChart.Data("IT", 40),
+//				 new PieChart.Data("ENG", 20),
+//				 new PieChart.Data("DOC", 30),
+//				 new PieChart.Data("FIN", 5),
+//				 new PieChart.Data("CHE", 5)
+//				);
+//		PieChart pChart = new PieChart(pieData);
 			
 		JButton btnNewButton_1 = new JButton("Pie Chart");
 		

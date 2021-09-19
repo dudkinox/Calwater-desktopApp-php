@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="it"><head><meta content="text/html;charset=ISO-8859-15" http-equiv="Content-Type"><title>Guida di Bearhtml</title></head>
+<body dir="ltr">
+<h2>Guida di BEARHTML 2.7.6</h2>
+<h4>Maiusc + F1 alterna questa guida e il messaggio mostrato prima</h4>
+<h3>Tastiera</h3><table border="1"><tbody><tr><td>Pg Su/Pg Gi&ugrave;</td><td>Scorre la visualizzazione di una pagina</td></tr><tr><td>Maiusc + Pg Su/Pg Gi&ugrave;</td><td>Scorre e seleziona in una pagina</td></tr><tr><td>Home/Fine</td><td>Passa all'inizio/fine di una riga</td></tr><tr><td>Maiusc + Home/Fine</td><td>Scorre e seleziona dall'inizio o dalla fine di una riga</td></tr><tr><td>Maiusc + Ctrl + Home/Fine</td><td>Scorre e seleziona dall'inizio/la fine di un&nbsp;documento</td></tr>
+<tr><td>Freccia Destra/Sinistra</td><td>Scorre per carattere</td></tr><tr><td>Maiusc +&nbsp;Freccia Destra/Sinistra</td><td>Scorre e seleziona caratteri</td></tr><tr><td>Ctrl +&nbsp;Freccia Destra/Sinistra</td><td>Scorre per parole</td></tr><tr><td>Maiusc + Ctrl + Freccia Destra/Sinistra</td><td>Scorre e seleziona per parole</td></tr><tr><td>Doppio clic</td><td>Seleziona la parola al cursore</td></tr><tr><td>Freccia Su/Gi&ugrave;</td><td>Scorre per riga</td></tr><tr><td>Rotella del mouse</td><td>Scorre per riga (+)</td></tr>
+<tr><td>Maiusc +&nbsp;Freccia Su/Gi&ugrave;</td><td>Scorre e seleziona le righe</td></tr><tr><td>Maiusc + F8</td><td>Seleziona la riga al cursore</td></tr><tr><td>Ctrl + C</td><td>Copia la selezione negli appunti</td></tr><tr><td>Ctrl + A</td><td>Seleziona tutto</td></tr><tr><td>Barra spaziatrice</td><td>Scorre in basso una pagina</td></tr><tr><td>Ctrl +&nbsp;Barra spaziatrice</td><td>Scorre in alto una pagina</td></tr><tr><td>Ctrl +Rotella del mouse</td><td>Tenta di diminuire/aumentare la dimensione del carattere (*)</td></tr>
+<tr><td>Tast. num.&nbsp; '/' (&divide;) o '*'</td><td>Tenta di diminuire/aumentare la dimensione del carattere (*)</td></tr>
+<tr><td>'&lt;' o '&gt;'</td><td>Tenta di diminuire/aumentare la dimensione del carattere (*)</td></tr>
+<tr><td>'Ctrl + PagGi&ugrave;/PagSu</td><td>Tenta di diminuire/aumentare la dimensione del carattere (*)</td></tr>
+<tr><td>Maiusc + Ctrl + 'P'</td><td>Stampa la pagina solo&nbsp;html</td></tr><tr><td>Maiusc + Ctrl + 'U'</td><td>Visualizza immagini remote</td></tr><tr><td>Maiusc + Ctrl + 'Y'</td><td>Azzera la cache per le immagini remote</td></tr></tbody></table>(*) In base al tipo di tastiera
+<br>(+) Vedere le quantit&agrave; di scorrimento della rotella del mouse&nbsp;in Bearhtml.ini
+<h3>Introduzione.</h3>
+Bearhtml &egrave; programma di rendering di pagine&nbsp;Html (visualizzatore).&nbsp;<b>Non &egrave; un&nbsp;browser</b>. L'impossibilit&agrave; di visualizzare una pagina pu&ograve; essere causata da due motivi principali:
+<ol>
+<li>Codice&nbsp;Html cattivo
+</li><li>Codifica dinamica (scripting)
+</li></ol>
+In entrambi i casi si pu&ograve; tentare di visualizzare la
+pagina&nbsp;selezionando "Show in Browser" nel men&ugrave; di scelta
+rapida (tasto destro del mouse) .
+<h3>Immagini</h3>I file remoti di immagini&nbsp;collegati tramite&nbsp;URL sono visualizzati come <img src="bearRmt.png" alt="Unfetched remote graphic">
+. Per vedere le immagini remote, premere Maiusc + Ctrl + 'U', o premere
+col tasto destro del mouse nell'area del messaggio (non su un'area di
+un'immagine) e selezionare&nbsp;"Mostra immagini" o assicurarsi che la
+finestra di lettura dei messaggi sia impostata sul recupero automatico.
+Vi sar&agrave; un leggero ritardo durante il recupero delle immagini.
+Durante il recupero delle immagini, potrebbe comparire un contatore che
+mostra il progresso dello scaricamento. Non chiudere il messaggio fino
+al completamento del countdown.
+<br>In caso di file immagine corrotti &nbsp;apparir&agrave; una casellina con dentro un punto esclamativo <img src="bearGrfn.png" alt="Corrupt graphic"> , ad indicare la presenza di grafica non visualizzabile. I file immagine non visualizzabili appariranno come <img src="bearRmt.png" alt="Unfetched remote graphic"> .
+<h3>Html non valido</h3>Se&nbsp;Bearhtml non &egrave; in grado di
+visualizzare il messaggio&nbsp;html, sar&agrave; invocato&nbsp;LibTidy
+per tentare di ripararlo. viene poi eseguito un tentativo di
+visualizzazione del messaggio riparato. Se il tentativo fallisce,
+nell'area di lettura del messaggio sar&agrave; visualizzato il codice
+html
+originale. Un errore in questa fase indica che il&nbsp;messaggio html
+&egrave; seriamente corrotto. Se la visualizzazione &egrave; vuota o
+mal formattata, premere il tasto destro e selezionare "Apri
+nel&nbsp;browser web".
+<br>Si vuole&nbsp;risolvere&nbsp;il problema per conto proprio? Col
+messaggio aperto, aprire&nbsp;Windows Explorer e andare alla directory
+dei file temporanei (ad es,
+C:\TEMP o C:\WINDOWS\TEMP) e cercare un messaggio appena
+creato&nbsp;col nome simile a&nbsp;WPM$1234.PM$. Aprirlo con un editor
+di testo (es.,&nbsp;Notepad): dovrebbe essere gruppo di
+codice&nbsp;Html.
+Salvare il&nbsp;file come file&nbsp;html, ad es. wpm$1234.htm, poi
+aprirlo col proprio&nbsp;browser tramite il comando&nbsp;"Apri file". <h3>Set di caratteri</h3>L'html
+&egrave; visualizzato utilizzando il normale set di caratteri
+dell'utente (ad es.&nbsp;ISO-8859-1; per l'utenza italiana si consiglia
+il set ISO-8859-15, N.d.T.). Se si leggono quadratini vuoti al posto del testo
+previsto, significa che il mittente sta utilizzando un set di caratteri
+diverso. Ripetere il metodo di risoluzione del problema indicato sopra,
+ma quando si &egrave; all'interno del&nbsp;browser andare a
+Visualizza/Codifica e selezionare uno dei metodi mostrati nell'elenco.
+Se uno di essi permette la lettura corretta del messaggio, &egrave;
+necessario informare l'utente del problema col set di caratteri, e
+identificare il set di caratteri usato indicato nelle intestazioni del
+messaggio.
+<br>Gli utenti di&nbsp;Windows 95 hanno un supporto limitato di set di
+caratteri, e dovrebbero impostare&nbsp;CheckUTF8=false nel
+Bearhtml.ini. <h3>Html sospetto</h3>
+Gli Url (collegamenti ipertestuali) su cui si clicca sopra vengono
+controllati per analizzare la loro potenziale pericolosit&agrave;, ad
+esempio, richieste fraudolente di informazioni personali. In
+maniera&nbsp;specifica:
+<ul>
+<li>Controllo dell'indirizzo&nbsp;IP numerico, es.: http://191.168.0.1
+</li><li>Controllo dell'indirizzo di collegamento a un doppio dominio, es.:&nbsp;http://www.buonsito.com@www.cattivosito.com
+</li><li>Controllo dei collegamenti fuorvianti, es.: il collegamento Url sottolineato &egrave; diverso dall'Url di destinazione
+</li><li>Controllo dei nomi di dominio Url oscurati, es.: http://%37icrosoft.com
+</li><li>Controllo di&nbsp;Url con contenuti indicati nel file&nbsp;Bearwarn.txt&nbsp;(analisi del Phishing)
+</li><li>Controllo che il dominio dell'Url di destinazione non sia
+stato inserito in un servizio di&nbsp;lista nera (blacklist service;
+www.Surbl.org) </li></ul>
+Se viene individuato un problema, si aprir&agrave; una finestra di
+dialogo. Premendo&nbsp;OK si invocher&agrave; il&nbsp;browser. Premendo
+Annulla, l'Url sar&agrave; ricordato per il resto della sessione
+di&nbsp;Pegasus Mail. Spostando il cursore del&nbsp;mouse di nuovo
+sull'Url far&agrave; apparire un segno di stop al posto dell'icona del
+puntatore.
+<br>Per il controllo della lista nera:&nbsp;WantBl=Yes/No nel&nbsp;BearHtml.ini.
+Premere sul collegamento&nbsp;Url. La riga di stato mostrer&agrave; il risultato.
+<h3>Individuazione del Phishing</h3>In aggiunta alla
+convalida&nbsp;della lista nera,&nbsp;Bearhtml esaminer&agrave; anche
+collegamento attivo che appare&nbsp;nello schermo. Se nomi di dominio
+conosciuti e rispettabili&nbsp;sono contenuti in qualsiasi punto oltre
+che nella parte corretta di un&nbsp;Url, verr&agrave; visualizzata una
+finestra di avviso. Gli utenti possono aggiornare l'elenco del
+file&nbsp;Bearwarn.txt coi loro propri domini. Vedere&nbsp;Bearwarn.txt
+per ulteriori informazioni.
+<h3>Scripting</h3>Non &egrave; supportata alcuna forma
+di&nbsp;scripting, ad esempio&nbsp;Javascript. Qualsiasi codice simile
+all'interno del messaggio sar&agrave; ignorato. Ci&ograve; rende
+problematica la visualizzazione di questi messaggi. Se necessario,
+questo&nbsp;html dovr&agrave; essere passato a un&nbsp;browser in grado
+di visualizzare il codice.<br>In aggiunta, sono ignorate tutte le richieste di impostazione o recupero dei cookie.
+<h3>Stampa</h3>Al momento,&nbsp;Bearhtml non stampa i messaggi di posta
+elettronica contenente informazioni in buste (envelope), ma stampa
+semplicemente la pagina&nbsp;html cos&igrave; come visualizzata,
+tramite la stampante predefinita di&nbsp;Windows.
+Optionally the printer can be changed by setting
+the PrinterSetup= value to Yes in Bearhtml.ini.
+<h3>Stili</h3>
+Al momento, sono elaborate le definizioni di stile interne. Gli stili in ubicazioni Url remote non vengono recuperati.
+<h3>Dimensione del caratteri</h3>L'aumento o la diminuzione della
+dimensione del carattere predefinito, utilizzando&nbsp;Ctrl + "rotella
+del mouse" potrebbe non funzionare in tutte le situazioni, e potrebbe
+causare, in alcuni casi, formattazione inappropriata. Se un messaggio
+contiene una codifica delle dimensioni dei caratteri, questa
+sar&agrave; usata al posto di qualsiasi dimensione predefinita.
+Secondariamente, qualsiasi messaggio con parti codificate con una
+dimensione del carattere e altre parti senza codifica, potrebbe
+risultare mal formattato. Si noti che nella tabella qui sopra sono
+indicate&nbsp;varie scorciatoie da tastiera per la sistemazione della
+dimensione del carattere.
+<h3>Registro</h3>&Egrave; possibile, a scopo di analisi, creare un
+file registro nella directory della Nuova posta di&nbsp;Pegasus
+Mail&nbsp;(es.: c:\pmail\mail); &egrave; un file di testo
+chiamato&nbsp;Bearhtml.log, che pu&ograve; essere modificato usando un
+editori di testo, tipo&nbsp;Notepad, ecc.
+<br>Nel caso in cui venga invocato&nbsp;LibTidy per tentare di
+riparare l'html, sar&agrave; creato un file&nbsp;Beartidy.txt,
+contenente il rapporto Tidy,&nbsp;nella directory della nuova posta.
+<h3>Timeout</h3>Bearhtml usa i servizi Internet
+di&nbsp;Windows&nbsp;(WinInet.dll)
+per eseguire ricerche&nbsp;DNS e recuperare le pagine web.
+Talvolta,&nbsp;Internet
+diviene lento, o i servizi tipo&nbsp;DNS possono subire interruzioni.
+Il&nbsp;timeout viene rilevato dai servizi Internet di&nbsp;Windows
+e&nbsp;Bearhtml ne &egrave; avvisato (il&nbsp;timeout tipico &egrave;
+di&nbsp;60 secondi). Il valore&nbsp;MaxFetchTime&nbsp;in
+Bearhtml indica il tempo massimo di attesa, che sar&agrave;
+probabilmente inferiore a questo valore di timeout. Se il tempo di
+scaricamento eccede questo&nbsp;valore&nbsp;MaxFetchTime, tutti gli
+ulteriori&nbsp;download per questo messaggio saranno bloccati.
+<h3>Scorrimento</h3>Vi sono due metodi per scorrere avanti e indietro
+una pagina web: le barre di scorrimento al lato dello schermo e i
+caratteri della tastiera.
+Nel caso delle barre di scorrimento, esso user&agrave; sempre le
+caratteristiche di movimento standard di Windows, di un certo numero di
+pixel in ciascuna direzione, senza tener conto della posizione del
+cursore di testo. <br>Utilizzando la tastiera si eseguono movimenti di scorrimento
+sensibili al testo, per spostare un certo numero di "righe" e
+riposizionare il cursore di testo. In questo caso la distanza da
+scorrere pu&ograve; essere un numero facilmente impostabile o, nel caso
+di testo e immagini, la distanza da scorrere pu&ograve; essere
+difficile da impostare.&nbsp;Bearhtml , ad esempio, scorrer&agrave;
+avanti e indietro una pagina tramite un'altezza di pixel e
+tenter&agrave; di trovare la nuova riga di testo completamente visibile
+per il posizionamento del cursore. <h3>Redirezionamento</h3>&nbsp;Il protocollo Http consente a un server web di
+modificare una richiesta Url per il recupero di oggetto (pagina o
+immagine) da un'altra ubicazione. Bearhtml pu&ograve; supportare questa
+caratteristica, che &egrave; disattivata in maniera predefinita. Fare
+attenzione se si sceglie di attivare il redirezionamento. La
+descrizione dei rischi del suo uso &egrave; fuori dallo scopo di questa
+guida. Fare una ricerca su Google, tipo questa:
+http://computing-dictionary.thefreedictionary.com/Http+redirection <h3>Installazione</h3>
+<ol>
+<li>Chiudere Pegasus Mail
+</li><li>Scompattare il contenuto del nuovo file bearhtml.zip
+all'interno della directory degli eseguibili di Pegasus Mail (ad
+es.:&nbsp;c:\pmail).
+</li><li>Modificare Bearhtml.ini e Bearwarn.txt, se necessario
+</li><li>Salvare Bearhtml.ini all'interno della directory nuova posta
+dell'utente, per sovrascrivere i valori di posizione predefiniti, se
+necessario </li><li>Riavviare Pegasus Mail
+</li></ol>
+<h3>Rimozione</h3><ol><li>Chiudere Pegasus Mail
+</li><li>Rinominare o eliminare Bearhtml.dll
+</li><li>Riavviare Pegasus Mail
+</li></ol>
+<a id="Parameter" name="Parameter"><h3>Contenuto di Bearhtml.ini</h3></a>
+<ul>
+<li>ScrollPixels=  (predefinito 20) pixel - altezza per spostare tramite rotella del mouse
+</li><li>ScrollRepeat= (predefinito 1) - ripetizione scorrimento tramite rotella del mouse
+</li><li>ScrollDelayMs= (predefinito 1msec) - ritardo tra gli scorrimenti della rotella del mouse
+</li><li>DefaultFontSize= (predefinito 12) - Dimensione del carattere nello schermo
+</li><li>DefaultFontName=  (predefinito Arial) - Carattere utilizzato
+</li><li>WantBl= (predefinito No, Yes/No) - Controllo Lista nera
+</li><li>WantCache= (predefinito Yes, Yes/No) Salvataggio delle immagini nella sottodirectory RmtFiles della nuova posta
+</li><li>LocalIPAddress= (non predefinito, da usare per evitare
+indirizzi numerici locali non-routable, come 127.0.0.1, che causano
+avvisi di Phishing, e indirizzi multipli
+separati da virgole.
+</li><li>MaxFetchTime=  (predefinito 25) tempo di scaricamento massimo accettabile, in secondi
+</li><li>CheckUTF8=   (predefinito No) Controllo intestazione MIME per il set di caratteri UTF8
+</li><li>Redirection= ( predefinito No) - L'Url Http viene indirizzata verso indirizzi alternativi (fare attenzione: rischio)</li>
+<li>PrinterSetup=  (default No) Allow printer selection for html printing</li></ul><br><i>Gli utenti di&nbsp;Windows 95 hanno un supporto limitato di set di
+caratteri, e dovrebbero impostare&nbsp;CheckUTF8=false nel
+Bearhtml.ini.</i><br>
+<h3>Copyright</h3>
+<ul><li>HtmlViewer: David Baldwin (<a href="http://www.pbear.com">http://www.pbear.com</a>)
+</li><li>Pegasus Mail: David Harris (<a href="http://www.pmail.com">http://www.pmail.com</a>)
+</li><li>Tidy: LibTidy-Project(<a href="http://tidy.sourceforge.net">http://tidy.sourceforge.net</a> and <a href="http://www.w3c.org">http://www.w3c.org</a>)
+</li><li>BearHtml: Martin Ireland (<a href="mailto:martin.ireland@gov.ab.ca">mailto:martin.ireland@gov.ab.ca</a>)
+</li><li>ReadWebData: Michael in der Wiesche
+</li></ul>
+</body></html>

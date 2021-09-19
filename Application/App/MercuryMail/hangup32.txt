@@ -1,0 +1,10 @@
+HANGUP32 - Copyright (c) 1996-1997 The Navas Group, All Rights Reserved.
+May be freely copied as long as no modifications are made.
+
+Extension for 32-bit version of Pegasus Mail for Windows to provide
+automatic hangup of Windows 95 Dial-Up Networking connections that
+are initiated by Pegasus Mail.
+
+To install, extract all files to your Pegasus Mail for Windows
+executable directory.
+

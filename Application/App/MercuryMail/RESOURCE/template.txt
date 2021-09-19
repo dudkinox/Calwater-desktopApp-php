@@ -1,0 +1,497 @@
+----------------------------------------------------------------------
+                     Pegasus Mail Message Templates
+----------------------------------------------------------------------
+                          Pegasus Mail System, 
+       Copyright (c) 1990-99, David Harris, All Rights Reserved.
+----------------------------------------------------------------------
+
+
+Contents:
+
+1:              Overview of Message Templates
+2:              Types of Templates
+3:              Using Templates within Pegasus Mail
+4:              The Message Template Script Language
+  4.1:          String literals
+      4.1.1:    Filenames
+  4.2:          Optional parameters
+  4.3:          Command substitutions
+  4.4:          Script language commands
+
+
+
+1: Overview of Message Templates
+--------------------------------
+
+Imagine that you're the web master for your Internet site; you receive a
+huge amount of mail for much of which the answer is essentially the
+same... You laboriously reply to the message, remove the pieces you don't
+want, type in your canned response, then send the message. Wouldn't it be
+good if there was some way of automating all of this? Well, there is --
+Message Templates.
+
+A Message Template is simply a script that tells Pegasus Mail how to
+compose a mail message. The template script commands allow you to set any
+address or feature field, include the original message for replies (or a
+portion of the message), change or modify addresses, add attachments and
+generally give you complete control over the shape of your automatically-
+generated message. What's even better, you can define variables in
+templates: when you use the template, Pegasus Mail will prompt you for
+values for the variables it contains; the script language can then take
+the values you enter, manipulate them, and insert them seamlessly into
+the generated message.
+
+Using a message template, you can generate a complex mail message and
+send it with only a couple of keystrokes.
+
+What uses might you have for a template? Here are some ideas:
+
+   * Helpdesk submissions (as per the sample HELPDESK.PM5 template)
+
+   * Mail server management forms (to simplify the process of
+     subscribing to and unsubscribing from lists)
+
+   * Forms: any kind of complex data-entry based mail form could
+     be generated using a template
+
+   * Order submission
+
+   * Automated replies
+
+
+2: Types of templates
+---------------------
+
+Pegasus Mail supports two types of templates - those used to create new
+messages from scratch, and those used to create replies to messages.
+Template files are simply plain text files containing template script
+language commands, one per line.
+
+Templates used to create new messages have the extension .PM5; the name
+portion can be anything you wish.
+
+Templates used to create replies to messages have the extension .PM6; once
+again, the name portion can be anything you wish.
+
+For both types of template, the script language's TITLE command must be
+the first line in the file, so that Pegasus Mail can show the name in its
+selector window. Pegasus Mail will not burrow through a template file
+looking for a TITLE command if it is not on the first line.
+
+Template files can be located in your home mailbox directory, or may be
+placed in the same directory as the Pegasus Mail executable program, in
+which case they become system-wide and are made available to all users
+running that copy of the program. There is no effective limit on the 
+number of templates you can define.
+
+For now, in order to create a template file you must use a text editor of
+some kind - for instance, the Windows NOTEPAD applet. If you use NOTEPAD,
+make sure that the Wordwrap option is turned off - each line in a
+template file must contain a single command and you cannot run lines 
+together. Future versions of Pegasus Mail may include a user-interface for
+creating template files.
+
+
+3: Using templates within Pegasus Mail
+--------------------------------------
+
+You can create a new message using a template by selecting Template...
+from the New Message submenu of the File menu. This will open a dialog
+listing all the templates available on your system. Select the template
+you want to use by highlighting it and clicking Open, or by double-
+clicking it. A window will open prompting you for any variables the
+template uses; at this point, you can choose whether to open a new
+message editor window filled out with the message created by the
+template, or simply to send the message without further ado.
+
+You can use a template to create a reply to a message in one of two ways:
+
+1: Right-click the message and choose "Reply using template..." from
+   the popup menu
+
+2: Highlight the message, then hold down <Shift> as you press the
+   "Reply" button, or else hold down <Shift> and press the R key.
+
+
+
+4: The Message Template Script Language
+---------------------------------------
+
+The script language used by Pegasus Mail templates is very simple. Each
+command in the file must appear on a single line of its own -- commands
+may not wrap lines, nor may more than one command appear on a single
+line. Lines starting with \, * ; or # are treated as comments and are
+ignored.
+
+
+4.1: String literals
+
+Most template script commands in the language accept strings as
+parameters. String literals of this kind must be entered in quote
+characters if they contain spaces or special characters.
+
+For example, if you want to use the "insert" command to write the string
+
+   Mary had a little lamb
+
+into an outgoing message, you would need to enter the command like this:
+
+   insert "Mary had a little lamb"
+
+since otherwise, only the word "Mary" would be inserted.
+
+If your string contains a quote character, or a backslash character, then
+you will need to perform a small amount of conversion. So, if you want to
+insert the string
+
+   Mary had a "little" lamb
+
+you would have to enter the "insert" command like this:
+
+   insert "Mary had a \"little\" lamb"
+
+These rules for string construction apply in all places throughout the
+script language.
+
+
+4.1.1: Filenames
+
+Filenames are treated as strings by the script language, and as such are
+subject to the same rules. In particular note that long filenames
+containing spaces will need to be quoted, and that '\' characters will
+need to be doubled in file paths... So, if you wanted to use the include
+command to include the file 
+
+   c:\docs\Mary's "little" lamb
+
+You would need to form the command as
+
+   include "c:\\docs\\Mary's \"little\" lamb"
+
+
+4.2: Optional parameters
+
+Some script commands are shown as having "optional" parameters. This
+notion needs some clarification... A parameter may be omitted only if all
+the parameters following it are also omitted - it is not possible to omit
+only one parameter from the middle of a list.
+
+So, using the "include" command as an example, if you wanted to include a
+file in quoted format, you would have to include the "0" value for the
+count parameter as well.
+
+
+4.3: Command substitutions
+
+Practically any string parameter to a script command can contain command
+substitutions: these are special character sequences that are replaced by
+variables or other information when they are encountered. Pegasus Mail
+recognizes the following command substitutions in any place where they
+may be used:
+
+   ~vvariable_name~   The current value of a template script variable
+   ~z                 A single newline (CR/LF)
+   ~f                 The "from" field of the original message
+   ~s                 The "subject" field of the original message
+   ~r                 The preferred reply address for the message
+   ~kfieldname~       Any field from the original message
+   ~n                 The current user's basic username
+   ~i                 The current user's Internet e-mail address
+   ~8                 The current user's username truncated to 8 chars
+   ~p                 The current user's personal name preference
+   ~d                 A random integer expressed as 4 hex digits
+   ~y                 The current date and time in RFC822 format
+   ~%name%            The value of environment variable %name%
+   ~lname~l           The user's address looked up from a synonym file
+   ~a                 The Pegasus Mail executable directory
+   ~h                 The current user's home mailbox
+   ~w                 The current user's new mailbox
+   ~~                 A single tilde (~).
+
+Examples:
+
+   Assuming that the current user's name is "david" and the variable
+   "sub" has been assigned the value "your order", the string
+
+      "This is a message from ~8, regarding ~vsub~"
+
+   would yield the following string after substitution:
+
+      "This is a message from david, regarding your order."
+
+Command substitution is the single most powerful feature of the scripting
+language used for templates, and a good understanding of what it can do
+is essential for writing useful scripts.
+
+
+4.4: Script language commands
+
+The following commands are valid in template scripts.
+
+   title      Set the title for a template script
+   helpfile   Set the help file for a template script
+   picture    Add a picture to the variable prompt dialog
+   text       Add a line of informational text to the prompt dialog
+   option     Set options controlling the way the template is processed
+
+   string     Create a string variable for the script
+   set        Set a message field or variable value
+   insert     Write a formatted line into the message body
+   include    Include a file or the original message body
+   attach     Attach a file to the message
+
+   extract    Extract elements from an e-mail address
+   lookup     Look up an item from a list using a key value
+ 
+   chain      Execute another template when the current template finishes
+
+ 
+# title <string>
+
+Set the title for the script file. string can be any string up to 50
+characters in length, and can contain all command substitutions except
+for variables, which are not defined at the time this command is
+processed.
+
+ 
+# helpfile <filename> [section]
+
+Set the help file which should be accessed when the user clicks the Help
+button in the variable prompt dialog. filename should be a full reference
+to any valid Windows Help file (*.HLP) on your system, and may contain
+all command substitions except for variables, which will have not been
+defined at the time this command is processed. section is an optional
+integer value that indicates the context help section within the help
+file that should be presented when the help button is pressed. If it is
+absent, section 0, the table of contents, is presented.
+
+ 
+# option <option_name> = <value>
+
+This command controls aspects of the way the template behaves as it is
+being processed. One option_name value is currently defined:
+
+   "EDITOR" = "Yes" or "No".
+   - Determines the state of the "Send message without opening a message
+     editor" control in the template's variable dialog.
+
+   Example:  OPTION EDITOR = NO
+   - Checks the "send without editor" control by default.
+
+
+# string <name> ["Default"] ["Prompt"] [len] [flags]
+
+Define a variable for use within the script. A maximum of 20 variables
+may be defined for any script. name is the name for the variable; it must
+not contain spaces, and is not case-sensitive (so var1 and VAR1 are
+considered the same). All the parameters following the name parameter are
+optional, and you can end the string early if you wish (you cannot omit a
+parameter if you need to supply a parameter following it on the line).
+"default" is a string which should be used as a default value for the
+variable: if it contains spaces or special characters, it must be
+enclosed in quotes (see "String literals", above, for more information).
+If this parameter is omitted, the default value is an empty string.
+"prompt" is the string Pegasus Mail should place next to the editing field
+in the variable prompt dialog. If omitted or zero-length, Pegasus Mail
+will not prompt the user for a value for this variable. "len" is an integer
+defining the maximum allowable length of this variable. If omitted, the
+default is "no limit". "flags" defines the format and type of the variable:
+the following flag values are available:
+
+   multiline       creates a multi-line variable
+   address         creates an e-mail address variable
+   filename        creates a filename variable
+   password        creates a password variable
+   list            creates a list - see below for more details
+   uppercase       specifies that the variable must be all in uppercase
+
+Only "uppercase" may be used with other values.
+
+ 
+Creating LIST variables
+
+When you use the LIST flag in a STRING statement, you create a variable
+that has a list of possible values from which the user can select. LIST
+variables require that you provide a DEFAULT value for the variable,
+which contains the list of possible values the variable can have. The
+first character in the default value should be the character used to
+separate the list items from each other, and the remainder of the default
+value should be the items, separated by that character.
+
+Example: you want to allow the user to select from the values "Red",
+"Green" and "Blue": your string statement would look like this:
+
+   string v1 ";Red;Green;Blue" "Select a colour" 0 list
+
+ 
+# set <field> = <"value">
+or set variable <variable_name> = <"value">
+
+The first form of this command sets a field within the mail message being
+generated to the specified value. field may be one of the following: 
+
+   to
+   cc
+   bcc
+   reply-to
+   subject 
+   identity      (all take an obvious string parameter)
+
+   urgent
+   confirm-reading
+   confirm-delivery
+   copyself
+   volatile
+   mime          (all take either a "Y" or "N" parameter)
+   
+   header        (a fully-formed e-mail header including the keyword)
+   encrypted     ("encryptor_name", "password", "flags" - see below
+                  for more details).
+
+When encrypting a template message, use the "encrypted" parameter to the
+set command. "encryptor" is the name of the module that should be used
+for encryption - to use the Pegasus Mail built in encryptor, use the name
+"builtin". "password" is the password for the message - this can be up to
+96 characters in length. "flags" controls the type of encryption
+performed; to encrypt a message, set it to 1; to add a digital signature
+to the message, set it to 4; to perform both operations, set it to 5.
+
+The "volatile" parameter tells Pegasus Mail to write the message directly
+to final form when sending using the built-in SMTP transport. You will
+need to set this to "Y" if you are attaching files that will be deleted
+once the template has been processed.
+
+The second form of the "set" command sets the value of any defined
+variable.
+
+Both forms of this command support all command substitutions for the value
+parameter. To copy the value of one variable to another, use an
+expression containing the ~v command substitution, like this:
+
+   set variable v1 = "~vv2~"
+
+ 
+# insert <"string">
+
+Write data into the body of the message being generated. string can
+contain any command substitution: if it does not contain a ~z
+substitution to force a line break, then the next insert command will
+write data onto the same line in the body. A single insert command may
+not insert more than 1024 characters into the message body.
+
+ 
+# include <filename> [count] [flags]
+or include message [count] [flags]
+
+Include either a text file, or the body from the message to which a reply
+is being generated. The text from the file or message is included as-is
+into the message body - command substitutions are not performed on the
+included data. The filename parameter may contain any valid command 
+substitutions. If "count" is present and non-zero, only that many lines of
+the included file or the body of the included message will be read. The
+"flags" item can be any combination of the following values:
+
+   quoted     "Comment-out" the included text using "> "
+   noheaders  If the file is a message, omit its RFC822 headers
+   keyheaders If the file is a message, include only "significant" headers
+   nobody     If the file is a message, omit the message body
+   message    Only valid for files: the file is an RFC822 message
+
+ 
+# attach <filename> [type] [encoding] ["Desc"]
+
+Attach a file to the generated message. Only "filename" is a mandatory
+parameter - the others can be omitted and are sensibly defaulted. Any
+valid command substitution can be used in the filename. If the filename
+contains spaces, it must be quoted. "type" is any string describing the 
+type of the file - for instance, "RTF_FILE". It must not contain spaces
+and is not constrained to the list of possible values inside Pegasus Mail
+itself. "encoding" is an integer value that specifies how the file should
+be encoded for transfer; the following values are defined - 0 (Pegasus
+Mail decides), 1 (No encoding - very dangerous), 2 (ASCII text), 3
+(UUencoding), 4 (BinHex 4.0) and 5 (Basic MIME encoding). Unless you are
+sure of what you are doing, use 0 for this field. "desc" is a textual
+description of the file; it may contain any text, including spaces, and
+is truncated at 63 characters.
+
+ 
+# picture <flags> <filename>
+
+Add a picture at the top of the variable prompt dialog. The picture
+specified by filename must be a Windows BMP file in 16 or 256 colours:
+owing to quirks in the way Windows handles 256 colour bitmaps, we
+strongly recommend that you use 16-colour bitmaps if your display runs in
+256 colour mode or lower. For the Win16 version of Pegasus Mail, the
+bitmap must not be larger than 60,000 bytes. You may use any command
+substitution in the filename parameter. The bitmap is centred 
+horizontally in the display and the dialog will adjust size to fit the
+vertical dimensions of the image. Exactly one image may be added to the
+dialog.
+
+flags will be used in future to offer extra formatting options. For now,
+it is unused, must be present, and should be set to zero.
+
+Note: if the filename contains spaces or special characters, it must be
+enclosed in quotes.
+
+ 
+# text <flags> <"string">
+
+Add a line of descriptive text to the dialog presented to prompt for
+script variables. The line of text is added above any variable editing
+fields, and below any picture defined using a picture command. You may
+specify up to 10 lines of descriptive text, and each line may contain any
+valid command substitution. The "flags" parameter will be used in future,
+but should currently be set to zero.
+
+To introduce a blank line between groups of lines, use a text statement
+with an empty quoted string - like this: text "".
+
+ 
+# extract address <var1> <var2>
+or extract text <var1> <var2>
+or extract user <var1> <var2>
+or extract domain <var1> <var2>
+
+Extract a component from an e-mail address. "var1" refers to the variable
+containing the address to be manipulated. "var2" is the variable where
+the result of the manipulation should be placed - it can be the same as
+"var1".
+
+   extract address    yields the minimum form of the e-mail address
+   extract text       yields the personal name field from the address
+   extract user       yields the simple user name portion of the address
+   extract domain     yields the domain portion of the address
+
+ 
+# lookup "string" <var1> <var2> <var3>
+
+Attempt to locate the string "string" in the list variable "var1"; if a
+match is found, note the position in the list where the item was matched,
+then copy the item at the same ordinal position in the list variable
+"var2" into the variable "var3". See above under the description of the
+"set" command for more information on list variables. It is an error for
+either "var1" or "var2" to be anything other than a list variable. If
+"string" cannot be found in "var1", variable "var3" is not changed.
+
+Example: list variable "v1" contains "Monday", "Tuesday" and "Wednesday"
+list variable "v2" contains "Open", "Closed" and "Open".
+
+The command
+
+   lookup "Tuesday" v1 v2 v3
+
+will result in variable v3 containing the value "Closed".
+
+A common form of this command will use the current value of "var1" as the
+string parameter, using the command substitution "~vvar1~".
+
+
+# chain "filename"
+
+Execute another template when the current template completes. "filename"
+should be the path to a valid template file, and may contain command
+substitutions. Only one "chain" command may be used per template. If the
+current template is cancelled by the user, the chain command will not be
+executed.
+

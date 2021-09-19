@@ -1,0 +1,32 @@
+msgok=Kattintson az "OK"-ra, hogy a lapot elérje,
+msgcancel=vagy kattintson a "Cancel"-re, ha ezt nem akarja.
+msgsafe=Biztos abban, hogy ez egy biztonságos lap?
+;
+mlamsg1=Internet-es csalás !
+mlamsg2=Arra kattintott  :
+mlamsg3=Ide kapcsolódott :
+mlamsg4=Ez az ellentmondás általában az Internetes csalás jele.
+mlamsg5=Valóban ide erre a címre akar menni:
+;
+ifamsg1=Hiányzó látható link !
+ifamsg2=A címben az igazi cél rejtett módon található.
+ifamsg3=Ez a cím egy ismert sebezhetõséget használ ki.
+;
+iaamsg1=IP cím figyelmeztetés !
+iaamsg2=A cím csak numerikus formában van megadva.
+iaamsg3=Ez jelenthetu azt is, hogy a címnek nincs bejegyzett
+iaamsg4=címe állandóra.
+;
+uaamsg1=URL cím figyelmeztetés !
+uaamsg2=A cím elrejti az igazi cél címet a % hexadecimális értékkel
+uaamsg3=vagy pedig értelmetlen formátumú.
+;
+dlmsg1=Grafika letöltése:
+dlmsg2=Kérem legyen türelmes
+dlmsg3=folytatódik
+;
+dnldcaption=Pegasus Mail Html üzenet megtekintõje
+;
+ictmsg1=Internet elérés - kapcsolat nélküli
+ictmsg2=Kapcsolódjak az Internet-re a grafika letöltéséért? 
+

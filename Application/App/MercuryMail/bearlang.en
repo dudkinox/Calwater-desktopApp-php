@@ -1,0 +1,31 @@
+msgok=Click the "OK" button to open this web page,
+msgcancel=or "Cancel" button if you do not wish to do so.
+msgsafe=Are you sure this Web Page is safe?
+;
+mlamsg1=Internet Fraud Alert !
+mlamsg2=You clicked on  :
+mlamsg3=You will link to:
+mlamsg4=This type of discrepancy is often an indicator of Internet fraud.
+mlamsg5=Do you really want to go to:
+;
+ifamsg1=Misleading Link Alert !
+ifamsg2=Url appears to contain a hidden real target address.
+ifamsg3=This Url is exploiting a known vulnerability.
+;
+iaamsg1=IP Address Alert !
+iaamsg2=Url appears to contain a numeric address.
+iaamsg3=This suggests the link does not have a domain name
+iaamsg4=and is a temporary location.
+;
+uaamsg1=URL BlackList Alert !
+uaamsg2=Url domain name is known to promote SPAM sales
+;
+dlmsg1=Downloading graphics:
+dlmsg2=Please be patient
+dlmsg3=to go
+;
+dnldcaption=Pegasus Mail Html message viewer
+;
+ictmsg1=Internet access status - offline
+ictmsg2=Do you wish to temporarily connect to download graphics? 
+

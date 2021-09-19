@@ -1,0 +1,32 @@
+msgok=Cliquez sur le bouton "OK" pour ouvrir cette page web,
+msgcancel=ou sur le bouton "Annuler" si vous ne voulez rien faire.
+msgsafe=Etes-vous certain que cette page web est saine?
+;
+mlamsg1=Alerte Fraude Internet !
+mlamsg2=Vous avez cliqué sur :
+mlamsg3=Vous allez être dirigé vers :
+mlamsg4=Ce type d'anomalie est souvent un indicateur de fraude Internet.
+mlamsg5=Voulez-vous réellement aller à :
+;
+ifamsg1=Alerte de lien masqué !
+ifamsg2=L'URL contient apparemment une adresse cachée.
+ifamsg3=Cette URL exploite une vulnérabilité connue.
+;
+iaamsg1=Alerte Adresse IP !
+iaamsg2=l'Url contient une adresse IP numérique.
+iaamsg3=Ceci suggère que le lien ne possède pas de 
+iaamsg4=nom de domaine et est une adresse temporaire.
+;
+uaamsg1=Alerte URL en liste Noire !
+uaamsg2=L'URL est connue comme générant du pourriel
+;
+dlmsg1=Téléchargement d'images :
+dlmsg2=Soyez patient
+dlmsg3=connexion en cours
+;
+dnldcaption=Pegasus Mail visualiseur de messages Html
+;
+ictmsg1=Accès Internet : hors ligne.
+ictmsg2=Voulez-vous établir une connexion pour télécharger les images ? 
+
+

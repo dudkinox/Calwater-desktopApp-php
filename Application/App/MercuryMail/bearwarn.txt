@@ -1,0 +1,139 @@
+; Phishing Alert checking (Stop sign)
+;
+;  1. The names below must not appear in a Url as part of the file location, ie:
+;        http://www.badguy.com/logins.ebay.com/index.htm
+;  2. If the visible underlined link text contains any of these names, 
+;  the actual target domain must contain the same domain, ie:
+;  visible text:  www.ebay.com   then the link Url must be of the form:
+;  http://????.ebay.com/????  (???? can be any text). See link Url popup
+;  3.  if the visible underlined link is different to the actual target domain 
+;   a warning will be issued unless the actual target domain is listed here.
+;
+;
+; Add your own favorite bank domain name etc to this list, dropping the first word, ie www  
+;  Vérification de tentative d'hameçonnage (Phishing)
+;
+;  Les noms ci-dessous ne doivent pas apparaître dans une URL en tant que nom
+;  de dossier ou de fichier, par exemple :
+;      http://www.mauvais.com/logins.ebay.fr/index.htm
+;
+;  De plus, si le lien affiché contient un de ces noms, la cible doit
+;  contenir le même nom de domaine. Exemple :
+;  Le texte affiché est :  www.ebay.fr  alors le lien doit pointer vers une URL
+;  de la forme :  http://????.ebay.fr/????  (où ???? peut être n'importe quel texte).
+;
+;  Ajoutez le nom de domaine de votre banque à cette liste,
+;  supprimez la première partie (ex www)
+;
+;
+; Analisi di Allarme Phishing
+;
+;  I nomi qui sotto non devono apparire in un'URL come parte dell'ubicazione
+;  del file, ad esempio:
+;    http://www.tirapino.com/logins.ebay.it/index.htm
+;
+;  Inoltre, se il testo del collegamento visibile sottolineato contiene uno
+;  qualsiasi di questi nomi, il dominio di destinazione reale deve contenere
+;  lo stesso nome di dominio. Se, ad esempio, il testo visibile è:
+;  www.ebay.it - allora il collegamento ipertestuale deve
+;  essere così formato: http://????.ebay.it/???? (dove ???? può essere qualsiasi
+;  testo).
+;  Aggiungete il nome di dominio della vostra banca all'elenco in basso, eliminando
+;  la prima parte dell'indirizzo, ad esempio www.
+paypal.com
+ebay.com
+visa.com
+citibank.com
+citizensbank.com
+bankofamerica.com
+ebay.de
+paypal.de
+telekom.de
+postbank.de
+sparkasse.de
+commerzbank.de
+deutsche-bank.de
+national.com.au
+barclays.co.uk
+halifax.co.uk
+rbcroyalbank.com
+paypal.fr
+ebay.fr
+visa.fr
+mastercard.com
+mastercard.fr
+americanexpress.com
+americanexpress.fr
+lcl.fr
+creditlyonnais.com
+creditlyonnais.fr
+credit-agricole.fr
+credit-agricole.com
+bnpparibas.net
+bnpparibas.com
+bnpparibas.fr
+societegenerale.fr
+caisse-epargne.fr
+caisse-epargne.com
+laposte.fr
+laposte.com
+banquepopulaire.fr
+bred.fr
+banqueroyale.com
+rbc.com
+cibc.com
+scotiabank.com
+bnc.ca
+amicusbank.com
+cwbank.com
+ctal.com
+citizensbank.ca
+alterna.ca
+pwbank.com
+banquelaurentienne.com
+manulifebank.ca
+sears.ca
+bmo.com
+firstnationsbank.com
+tdcanadatrust.com
+pcfinancial.ca
+woolwich.co.uk
+halifax.co.uk
+alliance-leicester.co.uk
+royalbank.com
+anz.com
+hsbc.co.uk
+bam.it
+bancacampania.it
+bancaintesa.it
+bancamediocredito.it
+bancamediolanum.it
+bancapopolareitaliana.it
+bancaroma.it
+bancatoscana.it
+bancawoolwich.it
+bancodibrescia.com
+bancosardegna.it
+barclaycard.it
+bnl.it
+bpn.it
+carime.it
+cariparo.it
+cartasi.it
+credem.it
+deutsche-bank.it
+gruppocarige.it
+iwbank.it
+mps.it
+popolarevicenza.it
+poste.it
+sanpaolo.it
+sella.it
+;     South Africa
+standardbank.co.za
+nedbank.co.za
+absa.co.za
+fnb.co.za
+mweb.co.za
+capitec.co.za
+

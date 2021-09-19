@@ -1,0 +1,5 @@
+Message preview is disabled.
+
+To re-enable the preview function, please go to the "Folders" menu
+and select the "Preview mode" option.
+
