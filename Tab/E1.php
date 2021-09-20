@@ -1,4 +1,4 @@
-<p class="h1 text-center">ข้อมูลตัวอย่างน้ำ S2</p>
+<p class="h1 text-center">ข้อมูลตัวอย่างน้ำ E1</p>
 <div class="row">
     <div class="card card-primary p-0 col-3">
         <div class="card-header">
@@ -24,7 +24,7 @@
                 <div class="form-group col-6">
                     <label>Sump No.</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" id="Sump_No" class="form-control" readonly value="S2">
+                        <input type="text" id="Sump_No" class="form-control" readonly value="E1">
                     </div>
                 </div>
             </div>

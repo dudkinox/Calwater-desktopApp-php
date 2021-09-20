@@ -19,10 +19,10 @@
                     <?php include 'Tab/S2.php'; ?>
                 </div>
                 <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
-                    <p class="h1 text-center">ข้อมูลตัวอย่างน้ำ S3</p>
+                    <?php include 'Tab/S3.php'; ?>
                 </div>
                 <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
-                    <p class="h1 text-center">ข้อมูลตัวอย่างน้ำ E1</p>
+                    <?php include 'Tab/E1.php'; ?>
                 </div>
             </div>
         </div>
