@@ -8,7 +8,7 @@
             <div class="form-group">
                 <label>Treatment Date:</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="text" value="<?php echo date("m/d/Y"); ?>" class="form-control datetimepicker-input" data-target="#reservationdate">
+                    <input type="text" id="Treatment_Date" value="<?php echo date("m/d/Y"); ?>" class="form-control datetimepicker-input" data-target="#reservationdate">
                     <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                     </div>
@@ -18,67 +18,67 @@
                 <div class="form-group col-6">
                     <label>Batch No.*</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control" readonly value="S2202101">
+                        <input type="text" id="Batch_No" class="form-control" readonly value="S2202101">
                     </div>
                 </div>
                 <div class="form-group col-6">
                     <label>Sump No.</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control" readonly value="S2">
+                        <input type="text" id="Sump_No" class="form-control" readonly value="S2">
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label>Vlume operation</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Volume" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
             <div class="form-group">
                 <label>Total Cr</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Total_Cr" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
             <div class="form-group">
                 <label>Cu</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Cu" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
             <div class="form-group">
                 <label>Mn</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Mn" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
             <div class="form-group">
                 <label>Ni</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Ni" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
             <div class="form-group">
                 <label>Pb</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Pb" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
             <div class="form-group">
                 <label>Zn</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    <input type="number" id="Zn" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
             </div>
         </div>
         <div class="card-footer">
             <div class="row text-center">
-                <div class="col-6 ">
+                <div class="col-6">
                     <img src="assets/image/cal.png" style="cursor: pointer" width="50" alt="คำนวณ">
                     <p>คำนวณ</p>
                 </div>
                 <div class="col-6">
-                    <img src="assets/image/save.png" style="cursor: pointer" width="50" alt="บันทึก">
+                    <img onclick="Save()" src="assets/image/save.png" style="cursor: pointer" width="50" alt="บันทึก">
                     <p>บันทึก</p>
                 </div>
             </div>

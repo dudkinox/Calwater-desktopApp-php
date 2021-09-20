@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +47,10 @@ date_default_timezone_set('Asia/Bangkok');
   <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- daterange picker -->
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed bg-secondary">
@@ -134,6 +141,12 @@ date_default_timezone_set('Asia/Bangkok');
   <script src="plugins/dropzone/min/dropzone.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+  <!-- Toastr -->
+  <script src="plugins/toastr/toastr.min.js"></script>
+  <!-- main javascript -->
+  <script src="Js/main.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
@@ -230,7 +243,17 @@ date_default_timezone_set('Asia/Bangkok');
       $("input[data-bootstrap-switch]").each(function() {
         $(this).bootstrapSwitch('state', $(this).prop('checked'));
       })
-
+      var Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+      <?php if ($_SESSION["InsertAlert"] == 1) { ?>
+        toastr.success('เพิ่มข้อมูลเรียบร้อยแล้ว!');
+      <?php
+        $_SESSION["InsertAlert"] = 0;
+      } ?>
     });
   </script>
 </body>
