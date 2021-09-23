@@ -24,6 +24,10 @@ else{
     $ID = 1;
 }
 
+require('CalS2.php');
+require('CalS3.php');
+require('CalE1.php');
+
 $query = "INSERT INTO info
         (
         ID, 

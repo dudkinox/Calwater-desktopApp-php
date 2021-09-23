@@ -7,6 +7,7 @@ session_start();
 <?php
 $Router = isset($_GET["router"]) ? $_GET["router"] : '';
 date_default_timezone_set('Asia/Bangkok');
+require('Database/connection.php');
 ?>
 
 <head>
@@ -110,7 +111,7 @@ date_default_timezone_set('Asia/Bangkok');
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="dist/js/pages/dashboard.js"></script>
   <!-- gharp -->
-  <script src="Js/chart.js"></script>
+  <script src="Js/chart.php"></script>
   <!-- Data table -->
   <script src="plugins/datatables/jquery.dataTables.min.js"></script>
   <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
