@@ -5,19 +5,19 @@
         <div class="card-body">
             <div class="row text-center">
                 <div class="col-12">
-                    <h5>Total metal <b class="text-danger">0.006857626</b> (mol)</h5>
+                    <h5>Total metal <b class="text-danger"><span id = "ShowTotal_metal"></span></b> (mol)</h5>
                 </div>
                 <div class="col-sm-3">
                     <h4 class="text-center text-dark">Ca(OH)2 (g)</h4>
                     <div class="color-palette-set mt-3">
                         <div class="bg-black color-palette">
-                            <span>0.629833021</span>
+                            <span id = "ShowTheoreticalCa"></span>
                         </div>
-                        <div class="bg-black disabled color-palette"><span> Theoretical</span></div>
+                        <div class="bg-black disabled color-palette"><span>Theoretical</span></div>
                     </div>
                     <div class="color-palette-set mt-3">
                         <div class="bg-black color-palette">
-                            <span>92.32722257</span>
+                            <span id = "ShowModelCa"></span>
                         </div>
                         <div class="bg-black disabled color-palette">
                             <span>Model</span>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="color-palette-set mt-3">
                         <div class="bg-black color-palette">
-                            <span>92.3965042</span>
+                            <span id = "ShowLabCa"></span>
                         </div>
                         <div class="bg-black disabled color-palette">
                             <span>Lab</span>
@@ -35,30 +35,30 @@
                 <div class="col-sm-3">
                     <h4 class="text-center text-primary">FeSO4 (g).</h4>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-primary color-palette"><span>2.221446155</span></div>
+                        <div class="bg-primary color-palette"><span id = "TheoreticalFe"></span></div>
                         <div class="bg-primary disabled color-palette"><span>Theoretical</span></div>
                     </div>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-primary color-palette"><span>128.1996576</span></div>
+                        <div class="bg-primary color-palette"><span id = "ModelFe"></span></div>
                         <div class="bg-primary disabled color-palette"><span>Operation by model</span></div>
                     </div>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-primary color-palette"><span>112.5828911</span></div>
+                        <div class="bg-primary color-palette"><span id = "LabFe"></span></div>
                         <div class="bg-primary disabled color-palette"><span>Operation by lab</span></div>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <h4 class="text-center text-danger">NaOCl</h4>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-danger color-palette"><span>133.3</span></div>
+                        <div class="bg-danger color-palette"><span id = "ModelNaOCl"></span></div>
                         <div class="bg-danger disabled color-palette"><span>Model</span></div>
                     </div>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-danger color-palette"><span>133.3</span></div>
+                        <div class="bg-danger color-palette"><span id = "ModelNa"></span></div>
                         <div class="bg-danger disabled color-palette"><span>Model</span></div>
                     </div>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-danger color-palette"><span>110</span></div>
+                        <div class="bg-danger color-palette"><span id = "LabNa"></span></div>
                         <div class="bg-danger disabled color-palette"><span>Lab</span></div>
                     </div>
                 </div>
@@ -66,11 +66,11 @@
                     <h4 class="text-center text-warning">TDS</h4>
 
                     <div class="color-palette-set mt-3">
-                        <div class="bg-warning color-palette"><span>8,413.21</span></div>
+                        <div class="bg-warning color-palette"><span id = "ModelTDS"></span></div>
                         <div class="bg-warning disabled color-palette"><span>Model</span></div>
                     </div>
                     <div class="color-palette-set mt-3">
-                        <div class="bg-warning color-palette"><span>8,055.64</span></div>
+                        <div class="bg-warning color-palette"><span id = "LabTDS"></span></div>
                         <div class="bg-warning disabled color-palette"><span>Lab</span></div>
                     </div>
                 </div>

@@ -148,6 +148,8 @@ require('Database/connection.php');
   <script src="plugins/toastr/toastr.min.js"></script>
   <!-- main javascript -->
   <script src="Js/main.js"></script>
+  <!-- calculate -->
+  <script src="Js/calculate.js"></script>
   <script>
     $(function() {
       $("#example1").DataTable({

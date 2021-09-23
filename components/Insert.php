@@ -24,6 +24,7 @@
                 <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                     <?php include 'Tab/E1.php'; ?>
                 </div>
+                <?php include 'Tab/Calculate.php'; ?>
             </div>
         </div>
     </div>

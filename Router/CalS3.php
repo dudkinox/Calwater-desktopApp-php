@@ -67,7 +67,7 @@ function Sum_NaOClS3($Total_Cr, $Cu, $Mn, $Ni, $Pb, $Zn, $Volume){
 		$LabT = 75;
 		// System.out.println("Time (min) model => " + ModelT);
 		// System.out.println("Time (min) lab => " + LabT);
-		return ModelN;
+		return $ModelN;
 }
 	
 function Sum_TDSS3($Total_Cr, $Cu, $Mn, $Ni, $Pb, $Zn, $Volume){

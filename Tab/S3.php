@@ -41,53 +41,55 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group col-4">
-                <label>Vlume operation</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="VolumeS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+            <div class="row">
+                <div class="form-group col-4">
+                    <label>Vlume operation</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="VolumeS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-4">
-                <label>Total Cr</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="Total_CrS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                <div class="form-group col-4">
+                    <label>Total Cr</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="Total_CrS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-4">
-                <label>Cu</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="CuS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                <div class="form-group col-4">
+                    <label>Cu</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="CuS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-6">
-                <label>Mn</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="MnS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                <div class="form-group col-6">
+                    <label>Mn</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="MnS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-6">
-                <label>Ni</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="NiS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                <div class="form-group col-6">
+                    <label>Ni</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="NiS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-6">
-                <label>Pb</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="PbS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                <div class="form-group col-6">
+                    <label>Pb</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="PbS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-6">
-                <label>Zn</label>
-                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="number" id="ZnS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                <div class="form-group col-6">
+                    <label>Zn</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="number" id="ZnS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="card-footer">
             <div class="row text-center">
                 <div class="col-6">
-                    <img src="assets/image/cal.png" style="cursor: pointer" width="50" alt="คำนวณ">
+                    <img src="assets/image/cal.png" onclick="CalculateS3()" style="cursor: pointer" width="50" alt="คำนวณ">
                     <p>คำนวณ</p>
                 </div>
                 <div class="col-6">
@@ -97,5 +99,4 @@
             </div>
         </div>
     </div>
-    <?php include 'Tab/Calculate.php'; ?>
 </div>
