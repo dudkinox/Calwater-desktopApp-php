@@ -1,2 +1,2 @@
-start http://localhost/calwater
+start http://localhost:8080/calwater
 exit
