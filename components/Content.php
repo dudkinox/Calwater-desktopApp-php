@@ -82,19 +82,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Other browsers</td>
-                        <td>All others</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>U</td>
-                        <td>U</td>
-                        <td>U</td>
-                        <td>U</td>
-                        <td>U</td>
-                        <td>U</td>
-                        <td>U</td>
-                    </tr>
+                    <?php
+                    $query = "SELECT *  FROM info";
+                    $result = $conn->query($query);
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                    ?>
+                            <tr>
+                                <td><?php echo $row["Batch_No"]; ?></td>
+                                <td><?php echo $row["Sump_No"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                            </tr>
+                        <?php
+                        }
+                    } else {
+                        ?>
+                        <tr></tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

@@ -101,19 +101,6 @@ function CalculateS2() {
   var f12 = m12.toFixed(7);
   var m13 = 0.606 * sumModel_L_Fe_SO_4 * ModelT;
   var f13 = m13.toFixed(7);
-  console.log("f1", f1);
-  console.log("f2", f2);
-  console.log("f3", f3);
-  console.log("f4", f4);
-  console.log("f5", f5);
-  console.log("f6", f6);
-  console.log("f7", f7);
-  console.log("f8", f8);
-  console.log("f9", f9);
-  console.log("f10", f10);
-  console.log("f11", f11);
-  console.log("f12", f12);
-  console.log("f13", f13);
   var SumModelTDS =
     6653 +
     Number(f1) -

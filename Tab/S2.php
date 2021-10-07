@@ -1,3 +1,5 @@
+<input type="text" style="display: none;" value="" id="modelca">
+<input type="text" style="display: none;" value="" id="labca">
 <p class="h1 text-center">ข้อมูลตัวอย่างน้ำ S2</p>
 <div class="row">
     <div class="card card-primary p-0 col-12">
@@ -15,18 +17,17 @@
                 </div>
             </div>
             <div class="row">
-                <?php 
-                    $queryBatch_No = "SELECT Batch_No FROM info WHERE `Batch_No` LIKE '%S2%' ORDER BY Batch_No DESC";
-                    $resultBatch_No = $conn->query($queryBatch_No);
-                    if($resultBatch_No->num_rows > 0){
-                        $rowBatch_No = $resultBatch_No->fetch_assoc();
-                        $No = substr($rowBatch_No["Batch_No"], 2, ); 
-                        $No++;
-                        $Batch_NoS2 = "S2".$No;
-                    }
-                    else{
-                        $Batch_NoS2 = "S2202101";
-                    }
+                <?php
+                $queryBatch_No = "SELECT Batch_No FROM info WHERE `Batch_No` LIKE '%S2%' ORDER BY Batch_No DESC";
+                $resultBatch_No = $conn->query($queryBatch_No);
+                if ($resultBatch_No->num_rows > 0) {
+                    $rowBatch_No = $resultBatch_No->fetch_assoc();
+                    $No = substr($rowBatch_No["Batch_No"], 2,);
+                    $No++;
+                    $Batch_NoS2 = "S2" . $No;
+                } else {
+                    $Batch_NoS2 = "S2202101";
+                }
                 ?>
                 <div class="form-group col-6">
                     <label>Batch No.*</label>

@@ -16,17 +16,12 @@ $Zn = isset($_GET["Zn"]) ? $_GET["Zn"] : '';
 $queryID = "SELECT ID FROM info ORDER BY ID DESC";
 $resultID = $conn->query($queryID);
 $ID = 0;
-if($resultID->num_rows>0){
+if ($resultID->num_rows > 0) {
     $rowID = $resultID->fetch_assoc();
     $ID = number_format($rowID["ID"]) + 1;
-}
-else{
+} else {
     $ID = 1;
 }
-
-require('CalS2.php');
-require('CalS3.php');
-require('CalE1.php');
 
 $query = "INSERT INTO info
         (
@@ -35,9 +30,11 @@ $query = "INSERT INTO info
         Batch_No, 
         Meet_MOI_Spec, 
         Sump_No, 
-        Treatment_Date, 
-        RWWA_ID, 
-        TWA_ID) 
+        Treatment_Date,
+        Ca, 
+        Fe, 
+        Na,
+        TDS) 
         VALUES (
         '',
         '" . $Volume . "',
@@ -46,59 +43,49 @@ $query = "INSERT INTO info
         '" . $Sump_No . "',
         '" . $Date . "',
         '" . $ID . "',
+        '" . $ID . "',
+        '" . $ID . "',
         '" . $ID . "')";
-
-$queryRWW = "INSERT INTO raw_waste_water_analysis
+$Ca = "INSERT INTO ca
             (
-            ID,  
-            Total_Cr, 
-            Cu, 
-            Mn, 
-            Ni, 
-            Pb, 
-            Zn, 
-            TDS) 
+            model, 
+            lab, 
+            No) 
             VALUES (
-            " . $ID . ",
-            " . $Total_Cr . ",
-            " . $Cu . ",
-            " . $Mn . ",
-            " . $Ni . ",
-            " . $Pb . ",
-            " . $Zn . ",
-            0)";
-            
- $queryTWA = "INSERT INTO treat_water_analysis
+            '" . $Volume . "',
+            '" . $Batch_No . "',
+            '" . $ID . "')";
+$Fe = "INSERT INTO fe
             (
-            ID,  
-            `Total_Cr:0.25`, 
-            `Cu:2.0`, 
-            `Mn:5.0`, 
-            `Ni:1.0`, 
-            `Pb:0.2`, 
-            `Zn:5.0`, 
-            `TDS:None`) 
+            model, 
+            lab, 
+            No) 
             VALUES (
-            " . $ID . ",
-            " . $Total_Cr . ",
-            " . $Cu . ",
-            " . $Mn . ",
-            " . $Ni . ",
-            " . $Pb . ",
-            " . $Zn . ",
-            0)";   
+            '" . $Volume . "',
+            '" . $Batch_No . "',
+            '" . $ID . "')";
+$Na = "INSERT INTO na
+            (
+            model, 
+            lab, 
+            No) 
+            VALUES (
+            '" . $Volume . "',
+            '" . $Batch_No . "',
+            '" . $ID . "')";
+$TDS = "INSERT INTO tds
+            (
+            model, 
+            lab, 
+            No) 
+            VALUES (
+            '" . $Volume . "',
+            '" . $Batch_No . "',
+            '" . $ID . "')";
 
 if ($conn->query($query) === TRUE) {
-    if ($conn->query($queryRWW) === TRUE) {
-        if ($conn->query($queryTWA) === TRUE) {
-            $_SESSION["InsertAlert"] = 1;
-            header('location: ../?router=insert');
-        }else{
-            echo "Error: " . $queryTWA . "<br>" . $conn->error; 
-        }
-    }else {
-        echo "Error: " . $queryRWW . "<br>" . $conn->error;
-    }
+    $_SESSION["InsertAlert"] = 1;
+    header('location: ../?router=insert');
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
 }
