@@ -195,7 +195,7 @@ function CalculateS3() {
     Pb / (1000 * 207.2) +
     Zn / 65328;
   var sumTotal_metal = Total_metal.toFixed(8);
-  document.getElementById("ShowTotal_metal").innerHTML = sumTotal_metal;
+  document.getElementById("ShowTotal_metalS3").innerHTML = sumTotal_metal;
   document.getElementById("totalmetal").value = sumTotal_metal;
 
   // Ca_OH_2
@@ -217,9 +217,9 @@ function CalculateS3() {
   var sumModel_G_Ca_OH_2 = Model_G.toFixed(9);
   var Lab_G = sumLab_L_Ca_OH_2 * Volume;
   var sumLab_G_Ca_OH_2 = Lab_G.toFixed(8);
-  document.getElementById("ShowTheoreticalCa").innerHTML = sumCa_OH_2;
-  document.getElementById("ShowModelCa").innerHTML = sumModel_G_Ca_OH_2;
-  document.getElementById("ShowLabCa").innerHTML = sumLab_G_Ca_OH_2;
+  document.getElementById("ShowTheoreticalCaS3").innerHTML = sumCa_OH_2;
+  document.getElementById("ShowModelCaS3").innerHTML = sumModel_G_Ca_OH_2;
+  document.getElementById("ShowLabCaS3").innerHTML = sumLab_G_Ca_OH_2;
   document.getElementById("ca").value = sumCa_OH_2;
   document.getElementById("modelca").value = sumModel_G_Ca_OH_2;
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
@@ -235,9 +235,9 @@ function CalculateS3() {
   var sumModel_G_Fe_SO_4 = Model_G_Fe_SO_4.toFixed(8);
   var Lab_G_Fe_SO_4 = (sumLab_L_Fe_SO_4 / 1000) * 1000 * Volume;
   var sumLab_G_Fe_SO_4 = Lab_G_Fe_SO_4.toFixed(8);
-  document.getElementById("TheoreticalFe").innerHTML = sumFe_SO_4;
-  document.getElementById("ModelFe").innerHTML = sumModel_G_Fe_SO_4;
-  document.getElementById("LabFe").innerHTML = sumLab_G_Fe_SO_4;
+  document.getElementById("TheoreticalFeS3").innerHTML = sumFe_SO_4;
+  document.getElementById("ModelFeS3").innerHTML = sumModel_G_Fe_SO_4;
+  document.getElementById("LabFeS3").innerHTML = sumLab_G_Fe_SO_4;
   document.getElementById("fe").value = sumFe_SO_4;
   document.getElementById("modelfe").value = sumModel_G_Fe_SO_4;
   document.getElementById("labfe").value = sumLab_G_Fe_SO_4;
@@ -251,9 +251,9 @@ function CalculateS3() {
   var sumlabV = labV.toFixed(9);
   var ModelT = 120;
   var LabT = 75;
-  document.getElementById("ModelNaOCl").innerHTML = ModelN;
-  document.getElementById("ModelNa").innerHTML = sumModel;
-  document.getElementById("LabNa").innerHTML = sumlabV;
+  document.getElementById("ModelNaOClS3").innerHTML = ModelN;
+  document.getElementById("ModelNaS3").innerHTML = sumModel;
+  document.getElementById("LabNaS3").innerHTML = sumlabV;
   document.getElementById("na").value = ModelN;
   document.getElementById("modelna").value = sumModel;
   document.getElementById("labna").value = sumlabV;
@@ -306,10 +306,10 @@ function CalculateS3() {
     Number(f14);
   var sumModelTDS = SumModelTDS.toFixed(2);
   var sumLab = 0.01;
-  document.getElementById("ModelTDS").innerHTML = sumModelTDS;
+  document.getElementById("ModelTDSS3").innerHTML = sumModelTDS;
   document.getElementById("modeltds").value = sumModelTDS;
   var F = sumLab.toFixed(2);
-  document.getElementById("LabTDS").innerHTML = F;
+  document.getElementById("LabTDSS3").innerHTML = F;
   document.getElementById("labtds").value = F;
 }
 
@@ -330,7 +330,7 @@ function CalculateE1() {
     Pb / (1000 * 207.2) +
     Zn / (1000 * 65.4);
   var sumTotal_metal = Total_metal.toFixed(9);
-  document.getElementById("ShowTotal_metal").innerHTML = sumTotal_metal;
+  document.getElementById("ShowTotal_metalE1").innerHTML = sumTotal_metal;
   document.getElementById("totalmetal").value = sumTotal_metal;
 
   // Ca_OH_2
@@ -344,9 +344,9 @@ function CalculateE1() {
   var sumModel_G_Ca_OH_2 = Model_G.toFixed(8);
   var Lab_G = sumLab_L_Ca_OH_2 * Volume;
   var sumLab_G_Ca_OH_2 = Lab_G.toFixed(9);
-  document.getElementById("ShowTheoreticalCa").innerHTML = sumCa_OH_2;
-  document.getElementById("ShowModelCa").innerHTML = sumModel_G_Ca_OH_2;
-  document.getElementById("ShowLabCa").innerHTML = sumLab_G_Ca_OH_2;
+  document.getElementById("ShowTheoreticalCaE1").innerHTML = sumCa_OH_2;
+  document.getElementById("ShowModelCaE1").innerHTML = sumModel_G_Ca_OH_2;
+  document.getElementById("ShowLabCaE1").innerHTML = sumLab_G_Ca_OH_2;
   document.getElementById("ca").value = sumCa_OH_2;
   document.getElementById("modelca").value = sumModel_G_Ca_OH_2;
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
@@ -362,9 +362,9 @@ function CalculateE1() {
   var sumModel_G_Fe_SO_4 = Model_G_Fe_SO_4.toFixed(6);
   var Lab_G_Fe_SO_4 = sumLab_L_Fe_SO_4 * Volume;
   var sumLab_G_Fe_SO_4 = Lab_G_Fe_SO_4.toFixed(6);
-  document.getElementById("TheoreticalFe").innerHTML = sumFe_SO_4;
-  document.getElementById("ModelFe").innerHTML = sumModel_G_Fe_SO_4;
-  document.getElementById("LabFe").innerHTML = sumLab_G_Fe_SO_4;
+  document.getElementById("TheoreticalFeE1").innerHTML = sumFe_SO_4;
+  document.getElementById("ModelFeE1").innerHTML = sumModel_G_Fe_SO_4;
+  document.getElementById("LabFeE1").innerHTML = sumLab_G_Fe_SO_4;
   document.getElementById("fe").value = sumFe_SO_4;
   document.getElementById("modelfe").value = sumModel_G_Fe_SO_4;
   document.getElementById("labfe").value = sumLab_G_Fe_SO_4;
@@ -378,9 +378,9 @@ function CalculateE1() {
   var sumlabV = labV.toFixed(9);
   var ModelT = 43.63;
   var LabT = 75;
-  document.getElementById("ModelNaOCl").innerHTML = ModelN;
-  document.getElementById("ModelNa").innerHTML = sumModel;
-  document.getElementById("LabNa").innerHTML = sumlabV;
+  document.getElementById("ModelNaOClE1").innerHTML = ModelN;
+  document.getElementById("ModelNaE1").innerHTML = sumModel;
+  document.getElementById("LabNaE1").innerHTML = sumlabV;
   document.getElementById("na").value = ModelN;
   document.getElementById("modelna").value = sumModel;
   document.getElementById("labna").value = sumlabV;
@@ -416,7 +416,7 @@ function CalculateE1() {
     Number(f8) -
     Number(f9);
   var sumModelTDS = SumModelTDS.toFixed(2);
-  document.getElementById("ModelTDS").innerHTML = sumModelTDS;
+  document.getElementById("ModelTDSE1").innerHTML = sumModelTDS;
   document.getElementById("modeltds").value = sumModelTDS;
 
   var t1 = 1343 * sumLab_L_Ca_OH_2;
@@ -449,7 +449,7 @@ function CalculateE1() {
     Number(d8) -
     Number(d9);
   var F = sumLab.toFixed(2);
-  document.getElementById("LabTDS").innerHTML = F;
+  document.getElementById("LabTDSE1").innerHTML = F;
   document.getElementById("labtds").value = F;
 
   var sumEquation =

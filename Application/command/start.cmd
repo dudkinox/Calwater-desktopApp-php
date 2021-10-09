@@ -1,2 +1,2 @@
-start http://localhost:8080/calwater
+start http://localhost/flutter_desktopapp/
 exit

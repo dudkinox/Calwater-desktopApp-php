@@ -16,15 +16,23 @@
         <div class="card-body text-dark">
             <div class="tab-content" id="custom-tabs-four-tabContent">
                 <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
-                    <?php include 'Tab/S2.php'; ?>
+                    <?php 
+                    include 'Tab/S2.php';
+                    include 'Tab/CalculateS2.php'; 
+                    ?>
                 </div>
                 <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
-                    <?php include 'Tab/S3.php'; ?>
+                    <?php 
+                    include 'Tab/S3.php';
+                    include 'Tab/CalculateS3.php'; 
+                    ?>
                 </div>
                 <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
-                    <?php include 'Tab/E1.php'; ?>
+                    <?php 
+                    include 'Tab/E1.php';
+                    include 'Tab/CalculateE1.php'; 
+                    ?>
                 </div>
-                <?php include 'Tab/Calculate.php'; ?>
             </div>
         </div>
     </div>

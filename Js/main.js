@@ -1,4 +1,4 @@
-function SaveS2(){
+function SaveS2() {
     var Treatment_Date = document.getElementById("Treatment_DateS2").value;
     var Batch_No = document.getElementById("Batch_NoS2").value;
     var Sump_No = document.getElementById("Sump_NoS2").value;
@@ -21,31 +21,31 @@ function SaveS2(){
     var labna = document.getElementById("labna").value;
     var modeltds = document.getElementById("modeltds").value;
     var labtds = document.getElementById("labtds").value;
-    window.location.href = "Router/?Treatment_Date=" + Treatment_Date + 
-                            "&Batch_No=" + Batch_No + 
-                            "&Sump_No=" + Sump_No +
-                            "&Volume=" + Volume +
-                            "&Total_Cr=" + Total_Cr +
-                            "&Cu=" + Cu +
-                            "&Mn=" + Mn +
-                            "&Ni=" + Ni +
-                            "&Pb=" + Pb +
-                            "&totalmetal=" + totalmetal +
-                            "&ca=" + ca +
-                            "&modelca=" + modelca +
-                            "&labca=" + labca +
-                            "&fe=" + fe +
-                            "&modelfe=" + modelfe +
-                            "&labfe=" + labfe +
-                            "&na=" + na +
-                            "&modelna=" + modelna +
-                            "&labna=" + labna +
-                            "&modeltds=" + modeltds +
-                            "&labtds=" + labtds +
-                            "&Zn=" + Zn;
+    window.location.href = "Router/?Treatment_Date=" + Treatment_Date +
+        "&Batch_No=" + Batch_No +
+        "&Sump_No=" + Sump_No +
+        "&Volume=" + Volume +
+        "&Total_Cr=" + Total_Cr +
+        "&Cu=" + Cu +
+        "&Mn=" + Mn +
+        "&Ni=" + Ni +
+        "&Pb=" + Pb +
+        "&totalmetal=" + totalmetal +
+        "&ca=" + ca +
+        "&modelca=" + modelca +
+        "&labca=" + labca +
+        "&fe=" + fe +
+        "&modelfe=" + modelfe +
+        "&labfe=" + labfe +
+        "&na=" + na +
+        "&modelna=" + modelna +
+        "&labna=" + labna +
+        "&modeltds=" + modeltds +
+        "&labtds=" + labtds +
+        "&Zn=" + Zn;
 }
 
-function SaveS3(){
+function SaveS3() {
     var Treatment_Date = document.getElementById("Treatment_DateS3").value;
     var Batch_No = document.getElementById("Batch_NoS3").value;
     var Sump_No = document.getElementById("Sump_NoS3").value;
@@ -68,31 +68,31 @@ function SaveS3(){
     var labna = document.getElementById("labna").value;
     var modeltds = document.getElementById("modeltds").value;
     var labtds = document.getElementById("labtds").value;
-    window.location.href = "Router/?Treatment_Date=" + Treatment_Date + 
-                            "&Batch_No=" + Batch_No + 
-                            "&Sump_No=" + Sump_No +
-                            "&Volume=" + Volume +
-                            "&Total_Cr=" + Total_Cr +
-                            "&Cu=" + Cu +
-                            "&Mn=" + Mn +
-                            "&Ni=" + Ni +
-                            "&Pb=" + Pb +
-                            "&totalmetal=" + totalmetal +
-                            "&ca=" + ca +
-                            "&modelca=" + modelca +
-                            "&labca=" + labca +
-                            "&fe=" + fe +
-                            "&modelfe=" + modelfe +
-                            "&labfe=" + labfe +
-                            "&na=" + na +
-                            "&modelna=" + modelna +
-                            "&labna=" + labna +
-                            "&modeltds=" + modeltds +
-                            "&labtds=" + labtds +
-                            "&Zn=" + Zn;
+    window.location.href = "Router/?Treatment_Date=" + Treatment_Date +
+        "&Batch_No=" + Batch_No +
+        "&Sump_No=" + Sump_No +
+        "&Volume=" + Volume +
+        "&Total_Cr=" + Total_Cr +
+        "&Cu=" + Cu +
+        "&Mn=" + Mn +
+        "&Ni=" + Ni +
+        "&Pb=" + Pb +
+        "&totalmetal=" + totalmetal +
+        "&ca=" + ca +
+        "&modelca=" + modelca +
+        "&labca=" + labca +
+        "&fe=" + fe +
+        "&modelfe=" + modelfe +
+        "&labfe=" + labfe +
+        "&na=" + na +
+        "&modelna=" + modelna +
+        "&labna=" + labna +
+        "&modeltds=" + modeltds +
+        "&labtds=" + labtds +
+        "&Zn=" + Zn;
 }
 
-function SaveE1(){
+function SaveE1() {
     var Treatment_Date = document.getElementById("Treatment_DateE1").value;
     var Batch_No = document.getElementById("Batch_NoE1").value;
     var Sump_No = document.getElementById("Sump_NoE1").value;
@@ -115,26 +115,40 @@ function SaveE1(){
     var labna = document.getElementById("labna").value;
     var modeltds = document.getElementById("modeltds").value;
     var labtds = document.getElementById("labtds").value;
-    window.location.href = "Router/?Treatment_Date=" + Treatment_Date + 
-                            "&Batch_No=" + Batch_No + 
-                            "&Sump_No=" + Sump_No +
-                            "&Volume=" + Volume +
-                            "&Total_Cr=" + Total_Cr +
-                            "&Cu=" + Cu +
-                            "&Mn=" + Mn +
-                            "&Ni=" + Ni +
-                            "&Pb=" + Pb +
-                            "&totalmetal=" + totalmetal +
-                            "&ca=" + ca +
-                            "&modelca=" + modelca +
-                            "&labca=" + labca +
-                            "&fe=" + fe +
-                            "&modelfe=" + modelfe +
-                            "&labfe=" + labfe +
-                            "&na=" + na +
-                            "&modelna=" + modelna +
-                            "&labna=" + labna +
-                            "&modeltds=" + modeltds +
-                            "&labtds=" + labtds +
-                            "&Zn=" + Zn;
+    window.location.href = "Router/?Treatment_Date=" + Treatment_Date +
+        "&Batch_No=" + Batch_No +
+        "&Sump_No=" + Sump_No +
+        "&Volume=" + Volume +
+        "&Total_Cr=" + Total_Cr +
+        "&Cu=" + Cu +
+        "&Mn=" + Mn +
+        "&Ni=" + Ni +
+        "&Pb=" + Pb +
+        "&totalmetal=" + totalmetal +
+        "&ca=" + ca +
+        "&modelca=" + modelca +
+        "&labca=" + labca +
+        "&fe=" + fe +
+        "&modelfe=" + modelfe +
+        "&labfe=" + labfe +
+        "&na=" + na +
+        "&modelna=" + modelna +
+        "&labna=" + labna +
+        "&modeltds=" + modeltds +
+        "&labtds=" + labtds +
+        "&Zn=" + Zn;
+}
+
+function sendID(id, no) {
+    console.log(id,no);
+    document.getElementById("deleteID").value = id;
+    document.getElementById("noID").value = no;
+    $('#exampleModal').modal('show');
+}
+
+function deleteID() {
+    var id = document.getElementById("deleteID").value;
+    var no = document.getElementById("noID").value;
+    console.log(id, no);
+    window.location.href = "Router/delete.php?delete=" + id + "&no=" + no;
 }

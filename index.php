@@ -52,11 +52,31 @@ require('Database/connection.php');
   <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed bg-secondary">
+  <input type="text" id="deleteID" style="display: none">
+  <input type="text" id="noID" style="display: none">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-dark" id="exampleModalLabel">ตรวจสอบ</h3>
+        </div>
+        <div class="modal-body text-dark">
+          <p class="h3">
+            ยืนยันการลบข้อมูล ?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+          <button type="button" class="btn btn-danger" onclick="deleteID()">ลบ</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrapper">
-
     <div class="preloader flex-column justify-content-center align-items-center">
       <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
     </div>
@@ -150,6 +170,10 @@ require('Database/connection.php');
   <script src="Js/main.js"></script>
   <!-- calculate -->
   <script src="Js/calculate.js"></script>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script>
     $(function() {
       $("#example1").DataTable({
@@ -257,6 +281,12 @@ require('Database/connection.php');
       <?php
         $_SESSION["InsertAlert"] = 0;
       } ?>
+      <?php if ($_SESSION["delete"] == 1) { ?>
+        toastr.success('ลบข้อมูลเรียบร้อยแล้ว!');
+      <?php
+        $_SESSION["delete"] = 0;
+      }
+      ?>
     });
   </script>
 </body>
