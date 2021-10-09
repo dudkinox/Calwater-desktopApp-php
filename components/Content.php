@@ -12,7 +12,7 @@ require('Router/order.php');
                     <h3>S2</h3>
                     <p><?php echo number_format(Order('S2')); ?> ข้อมูล</p>
                 </div>
-                <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> 20 ก.ย. 2564</a>
+                <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> <?php echo UpdateDate('S2'); ?></a>
             </div>
         </div>
         <div class="col-lg-4 col-6">
@@ -21,7 +21,7 @@ require('Router/order.php');
                     <h3>S3</h3>
                     <p><?php echo number_format(Order('S3')); ?> ข้อมูล</p>
                 </div>
-                <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> 20 ก.ย. 2564</a>
+                <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> <?php echo UpdateDate('S3'); ?></a>
             </div>
         </div>
         <div class="col-lg-4 col-6">
@@ -30,7 +30,7 @@ require('Router/order.php');
                     <h3>E1</h3>
                     <p><?php echo number_format(Order('E1')); ?> ข้อมูล</p>
                 </div>
-                <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> 20 ก.ย. 2564</a>
+                <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> <?php echo UpdateDate('E1'); ?></a>
             </div>
         </div>
     </div>
