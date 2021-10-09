@@ -83,7 +83,26 @@
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT *  FROM info";
+                    $query = "SELECT Batch_No,
+                                     Sump_No, 
+                                     Treatment_Date,
+                                     B.model AS camodel,
+                                     B.lab AS calab,
+                                     C.model AS femodel,
+                                     C.lab AS felab,
+                                     D.model AS namodel,
+                                     D.lab AS nalab,
+                                     E.model  AS tdsmodel,
+                                     E.lab AS tdslab
+                                FROM info AS A
+                                INNER JOIN ca AS B
+                                ON A.Ca = B.No
+                                INNER JOIN fe AS C
+                                ON A.Fe = C.No
+                                INNER JOIN na AS D
+                                ON A.Na = D.No
+                                INNER JOIN tds AS E
+                                ON A.TDS = E.No";
                     $result = $conn->query($query);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -92,14 +111,14 @@
                                 <td><?php echo $row["Batch_No"]; ?></td>
                                 <td><?php echo $row["Sump_No"]; ?></td>
                                 <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
-                                <td><?php echo $row["Treatment_Date"]; ?></td>
+                                <td><?php echo $row["camodel"]; ?></td>
+                                <td><?php echo $row["calab"]; ?></td>
+                                <td><?php echo $row["femodel"]; ?></td>
+                                <td><?php echo $row["felab"]; ?></td>
+                                <td><?php echo $row["namodel"]; ?></td>
+                                <td><?php echo $row["nalab"]; ?></td>
+                                <td><?php echo $row["tdsmodel"]; ?></td>
+                                <td><?php echo $row["tdslab"]; ?></td>
                             </tr>
                         <?php
                         }

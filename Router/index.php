@@ -12,7 +12,18 @@ $Mn = isset($_GET["Mn"]) ? $_GET["Mn"] : '';
 $Ni = isset($_GET["Ni"]) ? $_GET["Ni"] : '';
 $Pb = isset($_GET["Pb"]) ? $_GET["Pb"] : '';
 $Zn = isset($_GET["Zn"]) ? $_GET["Zn"] : '';
-
+$totalmetal = isset($_GET["totalmetal"]) ? $_GET["totalmetal"] : '';
+$ca = isset($_GET["ca"]) ? $_GET["ca"] : '';
+$modelca = isset($_GET["modelca"]) ? $_GET["modelca"] : '';
+$labca = isset($_GET["labca"]) ? $_GET["labca"] : '';
+$fe = isset($_GET["fe"]) ? $_GET["fe"] : '';
+$modelfe = isset($_GET["modelfe"]) ? $_GET["modelfe"] : '';
+$labfe = isset($_GET["labfe"]) ? $_GET["labfe"] : '';
+$na = isset($_GET["na"]) ? $_GET["na"] : '';
+$modelna = isset($_GET["modelna"]) ? $_GET["modelna"] : '';
+$labna = isset($_GET["labna"]) ? $_GET["labna"] : '';
+$modeltds = isset($_GET["modeltds"]) ? $_GET["modeltds"] : '';
+$labtds = isset($_GET["labtds"]) ? $_GET["labtds"] : '';
 $queryID = "SELECT ID FROM info ORDER BY ID DESC";
 $resultID = $conn->query($queryID);
 $ID = 0;
@@ -48,44 +59,62 @@ $query = "INSERT INTO info
         '" . $ID . "')";
 $Ca = "INSERT INTO ca
             (
+            ca, 
             model, 
             lab, 
             No) 
             VALUES (
-            '" . $Volume . "',
-            '" . $Batch_No . "',
+            '" . $ca . "',
+            '" . $modelca . "',
+            '" . $labca . "',
             '" . $ID . "')";
 $Fe = "INSERT INTO fe
             (
+            fe, 
             model, 
             lab, 
             No) 
             VALUES (
-            '" . $Volume . "',
-            '" . $Batch_No . "',
+            '" . $fe . "',
+            '" . $modelfe . "',
+            '" . $labfe . "',
             '" . $ID . "')";
 $Na = "INSERT INTO na
             (
+            na, 
             model, 
             lab, 
             No) 
             VALUES (
-            '" . $Volume . "',
-            '" . $Batch_No . "',
+            '" . $na . "',
+            '" . $modelna . "',
+            '" . $labna . "',
             '" . $ID . "')";
 $TDS = "INSERT INTO tds
             (
+            tds, 
             model, 
             lab, 
             No) 
             VALUES (
-            '" . $Volume . "',
-            '" . $Batch_No . "',
+            '0',
+            '" . $modeltds . "',
+            '" . $labtds . "',
             '" . $ID . "')";
 
-if ($conn->query($query) === TRUE) {
+if (
+    $conn->query($query) === TRUE
+    && $conn->query($Ca) === TRUE
+    && $conn->query($Fe) === TRUE
+    && $conn->query($Na) === TRUE
+    && $conn->query($TDS) === TRUE
+) {
     $_SESSION["InsertAlert"] = 1;
     header('location: ../?router=insert');
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
+    echo "Error: " . $Ca . "<br>" . $conn->error;
+    echo "Error: " . $Fe . "<br>" . $conn->error;
+    echo "Error: " . $Na . "<br>" . $conn->error;
+    echo "Error: " . $TDS . "<br>" . $conn->error;
 }

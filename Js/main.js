@@ -9,6 +9,18 @@ function SaveS2(){
     var Ni = document.getElementById("NiS2").value;
     var Pb = document.getElementById("PbS2").value;
     var Zn = document.getElementById("ZnS2").value;
+    var totalmetal = document.getElementById("totalmetal").value;
+    var ca = document.getElementById("ca").value;
+    var modelca = document.getElementById("modelca").value;
+    var labca = document.getElementById("labca").value;
+    var fe = document.getElementById("fe").value;
+    var modelfe = document.getElementById("modelfe").value;
+    var labfe = document.getElementById("labfe").value;
+    var na = document.getElementById("na").value;
+    var modelna = document.getElementById("modelna").value;
+    var labna = document.getElementById("labna").value;
+    var modeltds = document.getElementById("modeltds").value;
+    var labtds = document.getElementById("labtds").value;
     window.location.href = "Router/?Treatment_Date=" + Treatment_Date + 
                             "&Batch_No=" + Batch_No + 
                             "&Sump_No=" + Sump_No +
@@ -18,6 +30,18 @@ function SaveS2(){
                             "&Mn=" + Mn +
                             "&Ni=" + Ni +
                             "&Pb=" + Pb +
+                            "&totalmetal=" + totalmetal +
+                            "&ca=" + ca +
+                            "&modelca=" + modelca +
+                            "&labca=" + labca +
+                            "&fe=" + fe +
+                            "&modelfe=" + modelfe +
+                            "&labfe=" + labfe +
+                            "&na=" + na +
+                            "&modelna=" + modelna +
+                            "&labna=" + labna +
+                            "&modeltds=" + modeltds +
+                            "&labtds=" + labtds +
                             "&Zn=" + Zn;
 }
 
@@ -32,6 +56,18 @@ function SaveS3(){
     var Ni = document.getElementById("NiS3").value;
     var Pb = document.getElementById("PbS3").value;
     var Zn = document.getElementById("ZnS3").value;
+    var totalmetal = document.getElementById("totalmetal").value;
+    var ca = document.getElementById("ca").value;
+    var modelca = document.getElementById("modelca").value;
+    var labca = document.getElementById("labca").value;
+    var fe = document.getElementById("fe").value;
+    var modelfe = document.getElementById("modelfe").value;
+    var labfe = document.getElementById("labfe").value;
+    var na = document.getElementById("na").value;
+    var modelna = document.getElementById("modelna").value;
+    var labna = document.getElementById("labna").value;
+    var modeltds = document.getElementById("modeltds").value;
+    var labtds = document.getElementById("labtds").value;
     window.location.href = "Router/?Treatment_Date=" + Treatment_Date + 
                             "&Batch_No=" + Batch_No + 
                             "&Sump_No=" + Sump_No +
@@ -41,6 +77,18 @@ function SaveS3(){
                             "&Mn=" + Mn +
                             "&Ni=" + Ni +
                             "&Pb=" + Pb +
+                            "&totalmetal=" + totalmetal +
+                            "&ca=" + ca +
+                            "&modelca=" + modelca +
+                            "&labca=" + labca +
+                            "&fe=" + fe +
+                            "&modelfe=" + modelfe +
+                            "&labfe=" + labfe +
+                            "&na=" + na +
+                            "&modelna=" + modelna +
+                            "&labna=" + labna +
+                            "&modeltds=" + modeltds +
+                            "&labtds=" + labtds +
                             "&Zn=" + Zn;
 }
 
@@ -55,6 +103,18 @@ function SaveE1(){
     var Ni = document.getElementById("NiE1").value;
     var Pb = document.getElementById("PbE1").value;
     var Zn = document.getElementById("ZnE1").value;
+    var totalmetal = document.getElementById("totalmetal").value;
+    var ca = document.getElementById("ca").value;
+    var modelca = document.getElementById("modelca").value;
+    var labca = document.getElementById("labca").value;
+    var fe = document.getElementById("fe").value;
+    var modelfe = document.getElementById("modelfe").value;
+    var labfe = document.getElementById("labfe").value;
+    var na = document.getElementById("na").value;
+    var modelna = document.getElementById("modelna").value;
+    var labna = document.getElementById("labna").value;
+    var modeltds = document.getElementById("modeltds").value;
+    var labtds = document.getElementById("labtds").value;
     window.location.href = "Router/?Treatment_Date=" + Treatment_Date + 
                             "&Batch_No=" + Batch_No + 
                             "&Sump_No=" + Sump_No +
@@ -64,5 +124,17 @@ function SaveE1(){
                             "&Mn=" + Mn +
                             "&Ni=" + Ni +
                             "&Pb=" + Pb +
+                            "&totalmetal=" + totalmetal +
+                            "&ca=" + ca +
+                            "&modelca=" + modelca +
+                            "&labca=" + labca +
+                            "&fe=" + fe +
+                            "&modelfe=" + modelfe +
+                            "&labfe=" + labfe +
+                            "&na=" + na +
+                            "&modelna=" + modelna +
+                            "&labna=" + labna +
+                            "&modeltds=" + modeltds +
+                            "&labtds=" + labtds +
                             "&Zn=" + Zn;
 }

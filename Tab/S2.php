@@ -1,5 +1,15 @@
+<input type="text" style="display: none;" value="" id="totalmetal">
+<input type="text" style="display: none;" value="" id="ca">
 <input type="text" style="display: none;" value="" id="modelca">
 <input type="text" style="display: none;" value="" id="labca">
+<input type="text" style="display: none;" value="" id="fe">
+<input type="text" style="display: none;" value="" id="modelfe">
+<input type="text" style="display: none;" value="" id="labfe">
+<input type="text" style="display: none;" value="" id="na">
+<input type="text" style="display: none;" value="" id="modelna">
+<input type="text" style="display: none;" value="" id="labna">
+<input type="text" style="display: none;" value="" id="modeltds">
+<input type="text" style="display: none;" value="" id="labtds">
 <p class="h1 text-center">ข้อมูลตัวอย่างน้ำ S2</p>
 <div class="row">
     <div class="card card-primary p-0 col-12">
