@@ -1,4 +1,6 @@
-<!--  -->
+<?php
+require('Router/order.php');
+?>
 <div class="col-11 mt-3 border-raduis">
     <div class="card text-center text-dark rounded">
         <p class="mt-3 h1 text-shadow">ระบบคำนวณระบบน้ำตัวอย่าง</p>
@@ -8,7 +10,7 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     <h3>S2</h3>
-                    <p>2,200 ข้อมูล</p>
+                    <p><?php echo number_format(Order('S2')); ?> ข้อมูล</p>
                 </div>
                 <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> 20 ก.ย. 2564</a>
             </div>
@@ -17,7 +19,7 @@
             <div class="small-box bg-success">
                 <div class="inner">
                     <h3>S3</h3>
-                    <p>2,200 ข้อมูล</p>
+                    <p><?php echo number_format(Order('S3')); ?> ข้อมูล</p>
                 </div>
                 <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> 20 ก.ย. 2564</a>
             </div>
@@ -26,7 +28,7 @@
             <div class="small-box bg-warning">
                 <div class="inner">
                     <h3>E1</h3>
-                    <p>2,200 ข้อมูล</p>
+                    <p><?php echo number_format(Order('E1')); ?> ข้อมูล</p>
                 </div>
                 <a href="#" class="small-box-footer">อัพเดตล่าสุด <i class="fas fa-arrow-circle-right"></i> 20 ก.ย. 2564</a>
             </div>
