@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2021 at 01:34 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Oct 10, 2021 at 10:01 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `ca` (
+  `ca` decimal(50,2) NOT NULL,
   `model` decimal(50,2) NOT NULL,
   `lab` decimal(50,2) NOT NULL,
   `No` int(11) NOT NULL
@@ -40,6 +41,7 @@ CREATE TABLE `ca` (
 --
 
 CREATE TABLE `fe` (
+  `fe` decimal(50,2) NOT NULL,
   `model` decimal(50,2) NOT NULL,
   `lab` decimal(50,2) NOT NULL,
   `No` int(11) NOT NULL
@@ -64,13 +66,6 @@ CREATE TABLE `info` (
   `TDS` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_nopad_ci;
 
---
--- Dumping data for table `info`
---
-
-INSERT INTO `info` (`ID`, `Volume`, `Batch_No`, `Meet_MOI_Spec`, `Sump_No`, `Treatment_Date`, `Ca`, `Fe`, `Na`, `TDS`) VALUES
-(1, '10.000000000', 'S2202101', 'YES', 'S2', '10/07/2021', 1, 1, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -78,6 +73,7 @@ INSERT INTO `info` (`ID`, `Volume`, `Batch_No`, `Meet_MOI_Spec`, `Sump_No`, `Tre
 --
 
 CREATE TABLE `na` (
+  `na` decimal(50,2) NOT NULL,
   `model` decimal(50,2) NOT NULL,
   `lab` decimal(50,2) NOT NULL,
   `No` int(11) NOT NULL
@@ -90,6 +86,7 @@ CREATE TABLE `na` (
 --
 
 CREATE TABLE `tds` (
+  `tds` decimal(50,2) NOT NULL,
   `model` decimal(50,2) NOT NULL,
   `lab` decimal(50,2) NOT NULL,
   `No` int(11) NOT NULL
@@ -137,7 +134,7 @@ ALTER TABLE `tds`
 -- AUTO_INCREMENT for table `info`
 --
 ALTER TABLE `info`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
