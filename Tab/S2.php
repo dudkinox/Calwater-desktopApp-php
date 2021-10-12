@@ -28,21 +28,21 @@
             </div>
             <div class="row">
                 <?php
-                $queryBatch_No = "SELECT Batch_No FROM info WHERE `Batch_No` LIKE '%S2%' ORDER BY Batch_No DESC";
+                $queryBatch_No = "SELECT Batch_No FROM info ORDER BY Batch_No DESC";
                 $resultBatch_No = $conn->query($queryBatch_No);
                 if ($resultBatch_No->num_rows > 0) {
                     $rowBatch_No = $resultBatch_No->fetch_assoc();
-                    $No = substr($rowBatch_No["Batch_No"], 2,);
+                    $No = $rowBatch_No["Batch_No"];
                     $No++;
-                    $Batch_NoS2 = "S2" . $No;
+                    $Batch_NoS2 = $No;
                 } else {
-                    $Batch_NoS2 = "S2202101";
+                    $Batch_NoS2 = "2021001";
                 }
                 ?>
                 <div class="form-group col-6">
                     <label>Batch No.*</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" id="Batch_NoS2" class="form-control" readonly value="<?php echo $Batch_NoS2; ?>">
+                        <input type="text" id="Batch_NoS2" class="form-control" readonly value="<?php echo 'S2' . $Batch_NoS2; ?>">
                     </div>
                 </div>
                 <div class="form-group col-6">

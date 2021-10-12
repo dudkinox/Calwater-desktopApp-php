@@ -86,8 +86,8 @@
                             <th colspan="3" class="bg-secondary"></th>
                             <th colspan="2" class="bg-info">Ca(OH)2 (g)</th>
                             <th colspan="2" class="bg-success">FeSO4 (g)</th>
-                            <th colspan="2" class="bg-warning">NaOCl</th>
-                            <th colspan="2" class="bg-danger">TDS</th>
+                            <th colspan="2" class="bg-warning">NaOCl (ml)</th>
+                            <th colspan="2" class="bg-danger">TDS (mg/l)</th>
                             <th class="bg-dark"></th>
                         </tr>
                         <tr>
@@ -134,7 +134,7 @@
                             while ($row = $result->fetch_assoc()) {
                         ?>
                                 <tr>
-                                    <td><?php echo $row["Batch_No"]; ?></td>
+                                    <td><?php echo $row["Sump_No"] . $row["Batch_No"]; ?></td>
                                     <td><?php echo $row["Sump_No"]; ?></td>
                                     <td><?php echo $row["Treatment_Date"]; ?></td>
                                     <td><?php echo $row["camodel"]; ?> <br>(g/Volume operated)</td>

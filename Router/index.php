@@ -4,6 +4,7 @@ require('../Database/connection.php');
 
 $Date = isset($_GET["Treatment_Date"]) ? $_GET["Treatment_Date"] : '';
 $Batch_No = isset($_GET["Batch_No"]) ? $_GET["Batch_No"] : '';
+$sBatch_No = substr($Batch_No, 2);
 $Sump_No = ($_GET["Sump_No"]) ? $_GET["Sump_No"] : '';
 $Volume = isset($_GET["Volume"]) ? $_GET["Volume"] : '';
 $Total_Cr = isset($_GET["Total_Cr"]) ? $_GET["Total_Cr"] : '';
@@ -49,7 +50,7 @@ $query = "INSERT INTO info
         VALUES (
         '',
         '" . $Volume . "',
-        '" . $Batch_No . "',
+        '" . $sBatch_No . "',
         'YES',
         '" . $Sump_No . "',
         '" . $Date . "',
