@@ -38,7 +38,6 @@ if ($resultID->num_rows > 0) {
 $query = "INSERT INTO info
         (
         ID, 
-        Volume, 
         Batch_No, 
         Meet_MOI_Spec, 
         Sump_No, 
@@ -49,7 +48,6 @@ $query = "INSERT INTO info
         TDS) 
         VALUES (
         '',
-        '" . $Volume . "',
         '" . $sBatch_No . "',
         'YES',
         '" . $Sump_No . "',
@@ -102,6 +100,24 @@ $TDS = "INSERT INTO tds
             '" . $modeltds . "',
             '" . $labtds . "',
             '" . $ID . "')";
+$input = "INSERT INTO input(
+            Vlume,
+            Total_Cr, 
+            Cu, 
+            Mn, 
+            Ni, 
+            Pb, 
+            Zn, 
+            No) 
+            VALUES (
+            " . $Volume . ",
+            " . $Total_Cr . ",
+            " . $Cu . ",
+            " . $Mn . ",
+            " . $Ni . ",
+            " . $Pb . ",
+            " . $Zn . ",
+            '" . $ID . "')";
 
 if (
     $conn->query($query) === TRUE
@@ -109,6 +125,7 @@ if (
     && $conn->query($Fe) === TRUE
     && $conn->query($Na) === TRUE
     && $conn->query($TDS) === TRUE
+    && $conn->query($input) === TRUE
 ) {
     $_SESSION["InsertAlert"] = 1;
     header('location: ../?router=insert');
@@ -118,4 +135,5 @@ if (
     echo "Error: " . $Fe . "<br>" . $conn->error;
     echo "Error: " . $Na . "<br>" . $conn->error;
     echo "Error: " . $TDS . "<br>" . $conn->error;
+    echo "Error: " . $input . "<br>" . $conn->error;
 }
