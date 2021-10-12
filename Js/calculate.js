@@ -17,7 +17,7 @@ function CalculateS2() {
   var sumTotal_metal = Total_metal.toFixed(9);
   document.getElementById("ShowTotal_metal").innerHTML = sumTotal_metal;
   document.getElementById("totalmetal").value = sumTotal_metal;
-  
+
   // Ca_OH_2
   var Ca_OH_2 =
     ((Total_Cr / (1000 * 51.996)) * 1.5 * 74.093 +
@@ -37,9 +37,11 @@ function CalculateS2() {
   var sumModel_G_Ca_OH_2 = Model_G.toFixed(8);
   var Lab_G = sumLab_L_Ca_OH_2 * Volume;
   var sumLab_G_Ca_OH_2 = Lab_G.toFixed(7);
-  document.getElementById("ShowTheoreticalCa").innerHTML = sumCa_OH_2;
-  document.getElementById("ShowModelCa").innerHTML = sumModel_G_Ca_OH_2;
-  document.getElementById("ShowLabCa").innerHTML = sumLab_G_Ca_OH_2;
+  document.getElementById("ShowTheoreticalCa").innerHTML = sumCa_OH_2 + " g";
+  document.getElementById("ShowModelCa").innerHTML =
+    sumModel_G_Ca_OH_2 + " g/Volume operated";
+  document.getElementById("ShowLabCa").innerHTML =
+    sumLab_G_Ca_OH_2 + " g/Volume operated";
   document.getElementById("ca").value = sumCa_OH_2;
   document.getElementById("modelca").value = sumModel_G_Ca_OH_2;
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
@@ -63,9 +65,11 @@ function CalculateS2() {
   var sumModel_G_Fe_SO_4 = Model_G_Fe_SO_4.toFixed(7);
   var Lab_G_Fe_SO_4 = sumLab_L_Fe_SO_4 * Volume;
   var sumLab_G_Fe_SO_4 = Lab_G_Fe_SO_4.toFixed(7);
-  document.getElementById("TheoreticalFe").innerHTML = sumFe_SO_4;
-  document.getElementById("ModelFe").innerHTML = sumModel_G_Fe_SO_4;
-  document.getElementById("LabFe").innerHTML = sumLab_G_Fe_SO_4;
+  document.getElementById("TheoreticalFe").innerHTML = sumFe_SO_4 + " g";
+  document.getElementById("ModelFe").innerHTML =
+    sumModel_G_Fe_SO_4 + " g/Volume operated";
+  document.getElementById("LabFe").innerHTML =
+    sumLab_G_Fe_SO_4 + " g/Volume operated";
   document.getElementById("fe").value = sumFe_SO_4;
   document.getElementById("modelfe").value = sumModel_G_Fe_SO_4;
   document.getElementById("labfe").value = sumLab_G_Fe_SO_4;
@@ -78,9 +82,10 @@ function CalculateS2() {
   var sumlabV = labV.toFixed(9);
   var ModelT = 71.81;
   var LabT = 75;
-  document.getElementById("ModelNaOCl").innerHTML = ModelN;
-  document.getElementById("ModelNa").innerHTML = sumModel;
-  document.getElementById("LabNa").innerHTML = sumlabV;
+  document.getElementById("ModelNaOCl").innerHTML = ModelN + " ml";
+  document.getElementById("ModelNa").innerHTML =
+    sumModel + " mL/Volume operated";
+  document.getElementById("LabNa").innerHTML = sumlabV + " mL/Volume operated";
   document.getElementById("na").value = ModelN;
   document.getElementById("modelna").value = sumModel;
   document.getElementById("labna").value = sumlabV;
@@ -217,9 +222,11 @@ function CalculateS3() {
   var sumModel_G_Ca_OH_2 = Model_G.toFixed(9);
   var Lab_G = sumLab_L_Ca_OH_2 * Volume;
   var sumLab_G_Ca_OH_2 = Lab_G.toFixed(8);
-  document.getElementById("ShowTheoreticalCaS3").innerHTML = sumCa_OH_2;
-  document.getElementById("ShowModelCaS3").innerHTML = sumModel_G_Ca_OH_2;
-  document.getElementById("ShowLabCaS3").innerHTML = sumLab_G_Ca_OH_2;
+  document.getElementById("ShowTheoreticalCaS3").innerHTML = sumCa_OH_2 + " g";
+  document.getElementById("ShowModelCaS3").innerHTML =
+    sumModel_G_Ca_OH_2 + " g/Volume operated";
+  document.getElementById("ShowLabCaS3").innerHTML =
+    sumLab_G_Ca_OH_2 + " g/Volume operated";
   document.getElementById("ca").value = sumCa_OH_2;
   document.getElementById("modelca").value = sumModel_G_Ca_OH_2;
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
@@ -235,9 +242,11 @@ function CalculateS3() {
   var sumModel_G_Fe_SO_4 = Model_G_Fe_SO_4.toFixed(8);
   var Lab_G_Fe_SO_4 = (sumLab_L_Fe_SO_4 / 1000) * 1000 * Volume;
   var sumLab_G_Fe_SO_4 = Lab_G_Fe_SO_4.toFixed(8);
-  document.getElementById("TheoreticalFeS3").innerHTML = sumFe_SO_4;
-  document.getElementById("ModelFeS3").innerHTML = sumModel_G_Fe_SO_4;
-  document.getElementById("LabFeS3").innerHTML = sumLab_G_Fe_SO_4;
+  document.getElementById("TheoreticalFeS3").innerHTML = sumFe_SO_4 + " g";
+  document.getElementById("ModelFeS3").innerHTML =
+    sumModel_G_Fe_SO_4 + " g/Volume operated";
+  document.getElementById("LabFeS3").innerHTML =
+    sumLab_G_Fe_SO_4 + " g/Volume operated";
   document.getElementById("fe").value = sumFe_SO_4;
   document.getElementById("modelfe").value = sumModel_G_Fe_SO_4;
   document.getElementById("labfe").value = sumLab_G_Fe_SO_4;
@@ -251,9 +260,11 @@ function CalculateS3() {
   var sumlabV = labV.toFixed(9);
   var ModelT = 120;
   var LabT = 75;
-  document.getElementById("ModelNaOClS3").innerHTML = ModelN;
-  document.getElementById("ModelNaS3").innerHTML = sumModel;
-  document.getElementById("LabNaS3").innerHTML = sumlabV;
+  document.getElementById("ModelNaOClS3").innerHTML = ModelN + " ml";
+  document.getElementById("ModelNaS3").innerHTML =
+    sumModel + " mL/Volume operated";
+  document.getElementById("LabNaS3").innerHTML =
+    sumlabV + " mL/Volume operated";
   document.getElementById("na").value = ModelN;
   document.getElementById("modelna").value = sumModel;
   document.getElementById("labna").value = sumlabV;
@@ -344,9 +355,11 @@ function CalculateE1() {
   var sumModel_G_Ca_OH_2 = Model_G.toFixed(8);
   var Lab_G = sumLab_L_Ca_OH_2 * Volume;
   var sumLab_G_Ca_OH_2 = Lab_G.toFixed(9);
-  document.getElementById("ShowTheoreticalCaE1").innerHTML = sumCa_OH_2;
-  document.getElementById("ShowModelCaE1").innerHTML = sumModel_G_Ca_OH_2;
-  document.getElementById("ShowLabCaE1").innerHTML = sumLab_G_Ca_OH_2;
+  document.getElementById("ShowTheoreticalCaE1").innerHTML = sumCa_OH_2 + " g";
+  document.getElementById("ShowModelCaE1").innerHTML =
+    sumModel_G_Ca_OH_2 + " g/Volume operated";
+  document.getElementById("ShowLabCaE1").innerHTML =
+    sumLab_G_Ca_OH_2 + " g/Volume operated";
   document.getElementById("ca").value = sumCa_OH_2;
   document.getElementById("modelca").value = sumModel_G_Ca_OH_2;
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
@@ -362,9 +375,11 @@ function CalculateE1() {
   var sumModel_G_Fe_SO_4 = Model_G_Fe_SO_4.toFixed(6);
   var Lab_G_Fe_SO_4 = sumLab_L_Fe_SO_4 * Volume;
   var sumLab_G_Fe_SO_4 = Lab_G_Fe_SO_4.toFixed(6);
-  document.getElementById("TheoreticalFeE1").innerHTML = sumFe_SO_4;
-  document.getElementById("ModelFeE1").innerHTML = sumModel_G_Fe_SO_4;
-  document.getElementById("LabFeE1").innerHTML = sumLab_G_Fe_SO_4;
+  document.getElementById("TheoreticalFeE1").innerHTML = sumFe_SO_4 + " g";
+  document.getElementById("ModelFeE1").innerHTML =
+    sumModel_G_Fe_SO_4 + " g/Volume operated";
+  document.getElementById("LabFeE1").innerHTML =
+    sumLab_G_Fe_SO_4 + " g/Volume operated";
   document.getElementById("fe").value = sumFe_SO_4;
   document.getElementById("modelfe").value = sumModel_G_Fe_SO_4;
   document.getElementById("labfe").value = sumLab_G_Fe_SO_4;
@@ -378,9 +393,11 @@ function CalculateE1() {
   var sumlabV = labV.toFixed(9);
   var ModelT = 43.63;
   var LabT = 75;
-  document.getElementById("ModelNaOClE1").innerHTML = ModelN;
-  document.getElementById("ModelNaE1").innerHTML = sumModel;
-  document.getElementById("LabNaE1").innerHTML = sumlabV;
+  document.getElementById("ModelNaOClE1").innerHTML = ModelN + " ml";
+  document.getElementById("ModelNaE1").innerHTML =
+    sumModel + " mL/Volume operated";
+  document.getElementById("LabNaE1").innerHTML =
+    sumlabV + " mL/Volume operated";
   document.getElementById("na").value = ModelN;
   document.getElementById("modelna").value = sumModel;
   document.getElementById("labna").value = sumlabV;

@@ -27,18 +27,17 @@
                 </div>
             </div>
             <div class="row">
-                <?php 
-                    $queryBatch_No = "SELECT Batch_No FROM info WHERE `Batch_No` LIKE '%S3%' ORDER BY Batch_No DESC";
-                    $resultBatch_No = $conn->query($queryBatch_No);
-                    if($resultBatch_No->num_rows > 0){
-                        $rowBatch_No = $resultBatch_No->fetch_assoc();
-                        $No = substr($rowBatch_No["Batch_No"], 2, ); 
-                        $No++;
-                        $Batch_NoS3 = "S3".$No;
-                    }
-                    else{
-                        $Batch_NoS3 = "S3202101";
-                    }
+                <?php
+                $queryBatch_No = "SELECT Batch_No FROM info WHERE `Batch_No` LIKE '%S3%' ORDER BY Batch_No DESC";
+                $resultBatch_No = $conn->query($queryBatch_No);
+                if ($resultBatch_No->num_rows > 0) {
+                    $rowBatch_No = $resultBatch_No->fetch_assoc();
+                    $No = substr($rowBatch_No["Batch_No"], 2,);
+                    $No++;
+                    $Batch_NoS3 = "S3" . $No;
+                } else {
+                    $Batch_NoS3 = "S3202101";
+                }
                 ?>
                 <div class="form-group col-6">
                     <label>Batch No.*</label>
@@ -55,7 +54,7 @@
             </div>
             <div class="row">
                 <div class="form-group col-4">
-                    <label>Vlume operation</label>
+                    <label>Vlume operation (L)</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
                         <input type="number" id="VolumeS3" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                     </div>

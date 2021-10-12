@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="card-body p-0 bg-light text-dark mt-5">
             <div class="card-header bg-success">
                 <h3 class="card-title">ข้อมูลรายละเอียดน้ำ</h3>
@@ -138,14 +138,14 @@
                                     <td><?php echo $row["Batch_No"]; ?></td>
                                     <td><?php echo $row["Sump_No"]; ?></td>
                                     <td><?php echo $row["Treatment_Date"]; ?></td>
-                                    <td><?php echo $row["camodel"]; ?></td>
-                                    <td><?php echo $row["calab"]; ?></td>
-                                    <td><?php echo $row["femodel"]; ?></td>
-                                    <td><?php echo $row["felab"]; ?></td>
-                                    <td><?php echo $row["namodel"]; ?></td>
-                                    <td><?php echo $row["nalab"]; ?></td>
-                                    <td><?php echo $row["tdsmodel"]; ?></td>
-                                    <td><?php echo $row["tdslab"]; ?></td>
+                                    <td><?php echo $row["camodel"]; ?> <br>(g/Volume operated)</td>
+                                    <td><?php echo $row["calab"]; ?> <br>(g/Volume operated)</td>
+                                    <td><?php echo $row["femodel"]; ?> <br>(g/Volume operated)</td>
+                                    <td><?php echo $row["felab"]; ?> <br>(g/Volume operated)</td>
+                                    <td><?php echo $row["namodel"]; ?> <br>(mL/Volume operated)</td>
+                                    <td><?php echo $row["nalab"]; ?> <br>(mL/Volume operated)</td>
+                                    <td><?php echo number_format($row["tdsmodel"], 2); ?></td>
+                                    <td><?php echo number_format($row["tdslab"], 2); ?></td>
                                     <td>
                                         <img src="assets/image/bin.png" onclick="sendID('<?php echo $row['Batch_No']; ?>', '<?php echo $row['id']; ?>')" type="button" width="30" alt="ลบ">
                                     </td>

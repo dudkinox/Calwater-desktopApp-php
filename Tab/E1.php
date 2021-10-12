@@ -55,7 +55,7 @@
             </div>
             <div class = "row">
             <div class="form-group col-4">
-                <label>Vlume operation</label>
+                <label>Vlume operation (L)</label>
                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
                     <input type="number" id="VolumeE1" class="form-control" placeholder="กรอกตัวเลขทศนิยมได้">
                 </div>
