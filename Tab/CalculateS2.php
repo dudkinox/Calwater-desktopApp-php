@@ -77,7 +77,14 @@
         </div>
         <div class="card-body p-0 bg-light text-dark mt-5">
             <div class="card-header bg-success">
-                <h3 class="card-title">ข้อมูลรายละเอียดน้ำ</h3>
+                <h3 class="card-title">
+                    <p class="h1">ข้อมูลรายละเอียดน้ำ
+                    </p>
+                </h3 class="card-title">
+                <div class="card-tools mr-3">
+                    <img src="assets/image/pdf.png" type="button" width="40" class="mt-1 ml-5" alt="ส่งออก pdf">
+                    <img src="assets/image/excel.png" type="button" width="40" class="mt-1 " alt="ส่งออก excel">
+                </div>
             </div>
             <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">

@@ -178,19 +178,32 @@ require('Database/connection.php');
     $(function() {
       $("#example1").DataTable({
         "responsive": true,
-        "lengthChange": false,
+        "lengthChange": true,
         "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        "buttons": ["copy", "colvis"]
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
+      $("#example2").DataTable({
         "responsive": true,
-      });
+        "lengthChange": true,
+        "autoWidth": false,
+        "buttons": ["copy", "colvis"]
+      }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+      $("#example3").DataTable({
+        "responsive": true,
+        "lengthChange": true,
+        "autoWidth": false,
+        "buttons": ["copy", "colvis"]
+      }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
+
+      // $('#example2').DataTable({
+      //   "paging": true,
+      //   "lengthChange": true,
+      //   "searching": false,
+      //   "ordering": true,
+      //   "info": true,
+      //   "autoWidth": false,
+      //   "responsive": true,
+      // });
       //Initialize Select2 Elements
       $('.select2').select2()
 
