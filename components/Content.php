@@ -62,8 +62,12 @@ require('Router/order.php');
                 </p>
             </h3 class="card-title">
             <div class="card-tools mr-3">
-                <img src="assets/image/pdf.png" type="button" width="40" class="mt-1 ml-5" alt="ส่งออก pdf">
-                <img src="assets/image/excel.png" type="button" width="40" class="mt-1 " alt="ส่งออก excel">
+                <a href="Router/pdf.php?page=dashboard" class="text-decoration-none" target="_blank">
+                    <img src="assets/image/pdf.png" type="button" width="40" class="mt-1 ml-5" alt="ส่งออก pdf">
+                </a>
+                <a href="Router/excel.php?page=dashboard" class="text-decoration-none" target="_blank">
+                    <img src="assets/image/excel.png" type="button" width="40" class="mt-1 " alt="ส่งออก excel">
+                </a>
             </div>
         </div>
         <!-- /.card-header -->
