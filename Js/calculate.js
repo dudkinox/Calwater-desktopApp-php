@@ -317,15 +317,15 @@ function CalculateS3() {
     Number(f14);
   var sumModelTDS = SumModelTDS.toFixed(2);
 
-  var l1 = 199 * sumLab_L_Ca_OH_2;
+  var l1 = 199 * sumLab_L_Ca_OH_2; //N4
   var t1 = l1.toFixed(7);
-  var l2 = 359.5 * sumLab_L_Fe_SO_4;
+  var l2 = 359.5 * sumLab_L_Fe_SO_4; //S4
   var t2 = l2.toFixed(8);
-  var l3 = 212.2 * LabMl;
+  var l3 = 212.2 * LabMl; // W4
   var t3 = l3.toFixed(6);
-  var l4 = 7.25 * LabT;
+  var l4 = 7.25 * LabT; // AA4
   var t4 = l4.toFixed(6);
-  var l5 = 74.1 * sumLab_G_Ca_OH_2 * sumLab_G_Ca_OH_2;
+  var l5 = 74.1 * sumLab_L_Ca_OH_2 * sumLab_L_Ca_OH_2;
   var t5 = l5.toFixed(7);
   var l6 = 49.22 * sumLab_L_Fe_SO_4 * sumLab_L_Fe_SO_4;
   var t6 = l6.toFixed(6);
