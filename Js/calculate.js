@@ -316,7 +316,52 @@ function CalculateS3() {
     Number(f13) -
     Number(f14);
   var sumModelTDS = SumModelTDS.toFixed(2);
-  var sumLab = 0.01;
+
+  var l1 = 199 * sumLab_L_Ca_OH_2;
+  var t1 = l1.toFixed(7);
+  var l2 = 359.5 * sumLab_L_Fe_SO_4;
+  var t2 = l2.toFixed(8);
+  var l3 = 212.2 * LabMl;
+  var t3 = l3.toFixed(6);
+  var l4 = 7.25 * LabT;
+  var t4 = l4.toFixed(6);
+  var l5 = 74.1 * sumLab_G_Ca_OH_2 * sumLab_G_Ca_OH_2;
+  var t5 = l5.toFixed(7);
+  var l6 = 49.22 * sumLab_L_Fe_SO_4 * sumLab_L_Fe_SO_4;
+  var t6 = l6.toFixed(6);
+  var l7 = 1.17 * LabMl * LabMl;
+  var t7 = l7.toFixed(7);
+  var l8 = 0.0453 * LabT * LabT;
+  var t8 = l8.toFixed(6);
+  var l9 = 10 * sumLab_L_Ca_OH_2 * sumLab_L_Fe_SO_4;
+  var t9 = l9.toFixed(7);
+  var l10 = 0 * sumLab_L_Fe_SO_4 * LabMl;
+  var t10 = l10.toFixed(7);
+  var l11 = 0 * sumLab_L_Ca_OH_2 * LabT;
+  var t11 = l11.toFixed(8);
+  var l12 = 3.2 * sumLab_L_Fe_SO_4 * LabMl;
+  var t12 = l12.toFixed(7);
+  var l13 = 0.653 * sumLab_L_Fe_SO_4 * LabT;
+  var t13 = l13.toFixed(7);
+  var l14 = 0.111 * LabMl * LabT;
+  var t14 = l14.toFixed(7);
+
+  var sumLab =
+    4735 -
+    Number(t1) -
+    Number(t2) +
+    Number(t3) -
+    Number(t4) +
+    Number(t5) +
+    Number(t6) -
+    Number(t7) +
+    Number(t8) -
+    Number(t9) +
+    Number(t10) -
+    Number(t11) -
+    Number(t12) +
+    Number(t13) -
+    Number(t14);
   document.getElementById("ModelTDSS3").innerHTML = sumModelTDS;
   document.getElementById("modeltds").value = sumModelTDS;
   var F = sumLab.toFixed(2);
