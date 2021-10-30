@@ -186,11 +186,11 @@ function CalculateS2() {
 function CalculateS3() {
   var Volume = document.getElementById("VolumeS3").value;
   var Total_Cr = document.getElementById("Total_CrS3").value;
-  var Cu = document.getElementById("CuS3").value;
-  var Mn = document.getElementById("MnS3").value;
-  var Ni = document.getElementById("NiS3").value;
-  var Pb = document.getElementById("PbS3").value;
-  var Zn = document.getElementById("ZnS3").value;
+  var Cu = document.getElementById("CuS3").value; // F4
+  var Mn = document.getElementById("MnS3").value; // G4
+  var Ni = document.getElementById("NiS3").value; // H4
+  var Pb = document.getElementById("PbS3").value; // I4
+  var Zn = document.getElementById("ZnS3").value; // J4
   // Total_metal
   var Total_metal =
     Total_Cr / (1000 * 51.996) +
@@ -199,7 +199,7 @@ function CalculateS3() {
     Ni / (1000 * 58.93) +
     Pb / (1000 * 207.2) +
     Zn / 65328;
-  var sumTotal_metal = Total_metal.toFixed(8);
+  var sumTotal_metal = Total_metal.toFixed(8); // K4
   document.getElementById("ShowTotal_metalS3").innerHTML = sumTotal_metal;
   document.getElementById("totalmetal").value = sumTotal_metal;
 
@@ -232,7 +232,16 @@ function CalculateS3() {
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
 
   // Fe_SO_4
-  var Fe_SO_4 = 0.492046694110654;
+  var Fe_SO_4 =
+    ((Cu / (1000 * 51.996)) * (3 / 2) * 151.908 +
+      (Mn / (1000 * 63.55) +
+        Ni / (1000 * 54.93) +
+        Pb / (1000 * 58.93) +
+        Zn / (1000 * 207.2) +
+        sumTotal_metal / (1000 * 65.4)) *
+        151.908 *
+        (100 / 98.5)) *
+    (278.014 / 151.908);
   var sumFe_SO_4 = Fe_SO_4.toFixed(8);
   var Model_L_Fe_SO_4 = sumFe_SO_4 * 11.668;
   var sumModel_L_Fe_SO_4 = Model_L_Fe_SO_4.toFixed(9);
