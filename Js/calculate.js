@@ -317,11 +317,11 @@ function CalculateS3() {
     Number(f14);
   var sumModelTDS = SumModelTDS.toFixed(2);
 
-  var l1 = 199 * sumLab_L_Ca_OH_2; 
+  var l1 = 199 * sumLab_L_Ca_OH_2;
   var t1 = l1.toFixed(7);
-  var l2 = 359.5 * sumLab_L_Fe_SO_4; 
+  var l2 = 359.5 * sumLab_L_Fe_SO_4;
   var t2 = l2.toFixed(8);
-  var l3 = 212.2 * LabMl; 
+  var l3 = 212.2 * LabMl;
   var t3 = l3.toFixed(6);
   var l4 = 7.25 * LabT;
   var t4 = l4.toFixed(6);
@@ -371,12 +371,12 @@ function CalculateS3() {
 
 function CalculateE1() {
   var Volume = document.getElementById("VolumeE1").value;
-  var Total_Cr = document.getElementById("Total_CrE1").value;
-  var Cu = document.getElementById("CuE1").value;
-  var Mn = document.getElementById("MnE1").value;
-  var Ni = document.getElementById("NiE1").value;
-  var Pb = document.getElementById("PbE1").value;
-  var Zn = document.getElementById("ZnE1").value;
+  var Total_Cr = document.getElementById("Total_CrE1").value; // E4
+  var Cu = document.getElementById("CuE1").value; // F4
+  var Mn = document.getElementById("MnE1").value; // G4
+  var Ni = document.getElementById("NiE1").value; // H4
+  var Pb = document.getElementById("PbE1").value; // I4
+  var Zn = document.getElementById("ZnE1").value; // J4
   // Total_metal
   var Total_metal =
     Total_Cr / (1000 * 51.996) +
@@ -390,7 +390,15 @@ function CalculateE1() {
   document.getElementById("totalmetal").value = sumTotal_metal;
 
   // Ca_OH_2
-  var Ca_OH_2 = 10.71633686;
+  var Ca_OH_2 =
+    ((Total_Cr / (1000 * 51.996)) * (3 / 2) * 74.093 +
+      (Cu / (1000 * 63.55) +
+        Mn / (1000 * 54.93) +
+        Ni / (1000 * 58.93) +
+        Pb / (1000 * 207.2) +
+        Zn / (1000 * 65.4)) *
+        74.093) *
+    (100 / 93.15);
   var sumCa_OH_2 = Ca_OH_2.toFixed(8);
   var Model_L = sumCa_OH_2 * 2.4456;
   var sumModel_L_Ca_OH_2 = Model_L.toFixed(8);
@@ -410,7 +418,16 @@ function CalculateE1() {
   document.getElementById("labca").value = sumLab_G_Ca_OH_2;
 
   // Fe_SO_4
-  var Fe_SO_4 = 38.0261601;
+  var Fe_SO_4 =
+    ((Total_Cr / (1000 * 51.996)) * (3 / 2) * 151.908 +
+      (Cu / (1000 * 63.55) +
+        Mn / (1000 * 54.93) +
+        Ni / (1000 * 58.93) +
+        Pb / (1000 * 207.2) +
+        Zn / (1000 * 65.4)) *
+        151.908 *
+        (100 / 98.5)) *
+    (278.014 / 151.908);
   var sumFe_SO_4 = Fe_SO_4.toFixed(7);
   var Model_L_Fe_SO_4 = sumFe_SO_4 * 1.245;
   var sumModel_L_Fe_SO_4 = Model_L_Fe_SO_4.toFixed(8);
