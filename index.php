@@ -6,6 +6,7 @@ session_start();
 
 <?php
 $Router = isset($_GET["router"]) ? $_GET["router"] : '';
+$Type = isset($_GET["type"]) ? $_GET["type"] : '';
 date_default_timezone_set('Asia/Bangkok');
 require('Database/connection.php');
 ?>
@@ -175,6 +176,16 @@ require('Database/connection.php');
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script>
+    <?php
+    $Tab = 0;
+    if ($Type == "S3") {
+      $Tab = 1;
+    } else if ($Type == "E1") {
+      $Tab = 2;
+    }
+    ?>
+    document.getElementsByClassName('tab-pane')[<?php echo $Tab; ?>].click()
+
     $(function() {
       $("#example1").DataTable({
         "responsive": true,

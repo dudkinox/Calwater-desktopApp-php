@@ -42,7 +42,7 @@
                 <div class="form-group col-6">
                     <label>Batch No.*</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" id="Batch_NoS3" class="form-control" readonly value="<?php echo 'S3' . $Batch_NoS3; ?>">
+                        <input type="text" id="Batch_NoS3" class="form-control" value="<?php echo 'S3' . $Batch_NoS3; ?>">
                     </div>
                 </div>
                 <div class="form-group col-6">

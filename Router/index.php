@@ -128,7 +128,7 @@ if (
     && $conn->query($input) === TRUE
 ) {
     $_SESSION["InsertAlert"] = 1;
-    header('location: ../?router=insert');
+    header('location: ../?router=insert&type=' . $Sump_No);
 } else {
     echo "Error: " . $query . "<br>" . $conn->error;
     echo "Error: " . $Ca . "<br>" . $conn->error;
